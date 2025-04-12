@@ -19,7 +19,25 @@ namespace T.world
 
         private void Home_Load(object sender, EventArgs e)
         {
-           
+            // Lấy kích thước màn hình
+            int screenWidth = Screen.PrimaryScreen.Bounds.Width;
+            int screenHeight = Screen.PrimaryScreen.Bounds.Height;
+
+            // Kích thước form mong muốn (80%)
+            int formWidth = (int)(screenWidth * 0.8);
+            int formHeight = (int)(screenHeight * 0.8);
+
+            // Gán kích thước
+            this.Width = formWidth;
+            this.Height = formHeight;
+
+            // Tính toán vị trí để căn giữa
+            int posX = (screenWidth - formWidth) / 2;
+            int posY = (screenHeight - formHeight) / 2;
+
+            // Gán vị trí
+            this.StartPosition = FormStartPosition.Manual;
+            this.Location = new Point(posX, posY);
 
         }
 
@@ -88,7 +106,14 @@ namespace T.world
             cbxAll.DroppedDown = false; // Ẩn danh sách khi rời chuột khỏi ComboBox
         }
 
+        private void btnGameList_Click(object sender, EventArgs e)
+        {
 
+        }
 
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
