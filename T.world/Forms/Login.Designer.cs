@@ -36,20 +36,29 @@
             this.Register_button = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pcEye = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcEye)).BeginInit();
             this.SuspendLayout();
             // 
             // txtEmail
             // 
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.ForeColor = System.Drawing.SystemColors.ScrollBar;
             this.txtEmail.Location = new System.Drawing.Point(107, 116);
             this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(406, 36);
             this.txtEmail.TabIndex = 0;
+            this.txtEmail.Text = "Email or Phone";
+            this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtEmail.Enter += new System.EventHandler(this.txtEmail_Enter);
+            this.txtEmail.Leave += new System.EventHandler(this.txtEmail_Leave);
             // 
             // txtPassword
             // 
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(107, 174);
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
@@ -59,11 +68,11 @@
             // 
             // Login_title
             // 
-            this.Login_title.Font = new System.Drawing.Font("Bauhaus 93", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Login_title.Font = new System.Drawing.Font("Book Antiqua", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Login_title.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.Login_title.Location = new System.Drawing.Point(172, 68);
+            this.Login_title.Location = new System.Drawing.Point(169, 30);
             this.Login_title.Name = "Login_title";
-            this.Login_title.Size = new System.Drawing.Size(194, 46);
+            this.Login_title.Size = new System.Drawing.Size(271, 66);
             this.Login_title.TabIndex = 2;
             this.Login_title.Text = "Đăng nhập";
             this.Login_title.Click += new System.EventHandler(this.Login_title_Click);
@@ -72,9 +81,9 @@
             // 
             this.Login_button.BackColor = System.Drawing.SystemColors.Highlight;
             this.Login_button.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.Login_button.Location = new System.Drawing.Point(293, 254);
+            this.Login_button.Location = new System.Drawing.Point(353, 240);
             this.Login_button.Name = "Login_button";
-            this.Login_button.Size = new System.Drawing.Size(220, 35);
+            this.Login_button.Size = new System.Drawing.Size(160, 62);
             this.Login_button.TabIndex = 3;
             this.Login_button.Text = "Đăng nhập";
             this.Login_button.UseVisualStyleBackColor = false;
@@ -84,9 +93,9 @@
             // 
             this.Register_button.BackColor = System.Drawing.SystemColors.Highlight;
             this.Register_button.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.Register_button.Location = new System.Drawing.Point(107, 254);
+            this.Register_button.Location = new System.Drawing.Point(107, 240);
             this.Register_button.Name = "Register_button";
-            this.Register_button.Size = new System.Drawing.Size(114, 35);
+            this.Register_button.Size = new System.Drawing.Size(155, 62);
             this.Register_button.TabIndex = 4;
             this.Register_button.Text = "Đăng kí";
             this.Register_button.UseVisualStyleBackColor = false;
@@ -112,11 +121,23 @@
             this.pictureBox2.TabIndex = 8;
             this.pictureBox2.TabStop = false;
             // 
+            // pcEye
+            // 
+            this.pcEye.Image = ((System.Drawing.Image)(resources.GetObject("pcEye.Image")));
+            this.pcEye.Location = new System.Drawing.Point(529, 159);
+            this.pcEye.Name = "pcEye";
+            this.pcEye.Size = new System.Drawing.Size(53, 51);
+            this.pcEye.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcEye.TabIndex = 9;
+            this.pcEye.TabStop = false;
+            this.pcEye.Click += new System.EventHandler(this.pcEye_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(561, 450);
+            this.ClientSize = new System.Drawing.Size(654, 405);
+            this.Controls.Add(this.pcEye);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Register_button);
@@ -130,6 +151,7 @@
             this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcEye)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -144,5 +166,6 @@
         private System.Windows.Forms.Button Register_button;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pcEye;
     }
 }
