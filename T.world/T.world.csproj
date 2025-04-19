@@ -78,62 +78,62 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="server\Models\Account.cs">
+    <Compile Include="Shared\Models\Account.cs">
       <DependentUpon>TworldDBModels.tt</DependentUpon>
     </Compile>
-    <Compile Include="server\Models\Batch.cs">
+    <Compile Include="Shared\Models\Batch.cs">
       <DependentUpon>TworldDBModels.tt</DependentUpon>
     </Compile>
-    <Compile Include="server\Models\Brand.cs">
+    <Compile Include="Shared\Models\Brand.cs">
       <DependentUpon>TworldDBModels.tt</DependentUpon>
     </Compile>
-    <Compile Include="server\Models\Category.cs">
+    <Compile Include="Shared\Models\Category.cs">
       <DependentUpon>TworldDBModels.tt</DependentUpon>
     </Compile>
-    <Compile Include="server\Models\Order.cs">
+    <Compile Include="Shared\Models\Order.cs">
       <DependentUpon>TworldDBModels.tt</DependentUpon>
     </Compile>
-    <Compile Include="server\Models\Payment.cs">
+    <Compile Include="Shared\Models\Payment.cs">
       <DependentUpon>TworldDBModels.tt</DependentUpon>
     </Compile>
-    <Compile Include="server\Models\Product.cs">
+    <Compile Include="Shared\Models\Product.cs">
       <DependentUpon>TworldDBModels.tt</DependentUpon>
     </Compile>
-    <Compile Include="server\Models\Products_images.cs">
+    <Compile Include="Shared\Models\Products_images.cs">
       <DependentUpon>TworldDBModels.tt</DependentUpon>
     </Compile>
-    <Compile Include="server\Models\Products_Orders.cs">
+    <Compile Include="Shared\Models\Products_Orders.cs">
       <DependentUpon>TworldDBModels.tt</DependentUpon>
     </Compile>
-    <Compile Include="server\Models\Products_Promotions.cs">
+    <Compile Include="Shared\Models\Products_Promotions.cs">
       <DependentUpon>TworldDBModels.tt</DependentUpon>
     </Compile>
-    <Compile Include="server\Models\Products_specs.cs">
+    <Compile Include="Shared\Models\Products_specs.cs">
       <DependentUpon>TworldDBModels.tt</DependentUpon>
     </Compile>
-    <Compile Include="server\Models\Promotion.cs">
+    <Compile Include="Shared\Models\Promotion.cs">
       <DependentUpon>TworldDBModels.tt</DependentUpon>
     </Compile>
-    <Compile Include="server\Models\Specification.cs">
+    <Compile Include="Shared\Models\Specification.cs">
       <DependentUpon>TworldDBModels.tt</DependentUpon>
     </Compile>
-    <Compile Include="server\Models\SubCategory.cs">
+    <Compile Include="Shared\Models\SubCategory.cs">
       <DependentUpon>TworldDBModels.tt</DependentUpon>
     </Compile>
-    <Compile Include="server\Models\Supplier.cs">
+    <Compile Include="Shared\Models\Supplier.cs">
       <DependentUpon>TworldDBModels.tt</DependentUpon>
     </Compile>
-    <Compile Include="server\Models\TworldDBModels.Context.cs">
+    <Compile Include="Shared\Models\TworldDBModels.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>TworldDBModels.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="server\Models\TworldDBModels.cs">
+    <Compile Include="Shared\Models\TworldDBModels.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>TworldDBModels.tt</DependentUpon>
     </Compile>
-    <Compile Include="server\Models\TworldDBModels.Designer.cs">
+    <Compile Include="Shared\Models\TworldDBModels.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>TworldDBModels.edmx</DependentUpon>
@@ -146,9 +146,10 @@
     <Compile Include="Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
-    <Compile Include="server\Services\common\ServiceResult.cs" />
-    <Compile Include="server\Services\Data\AccountService.cs" />
-    <Compile Include="server\Services\Helpers\PasswordHelper.cs" />
+    <Compile Include="Server\Repositories\AccountRepository.cs" />
+    <Compile Include="Server\Utilities\ServiceResult.cs" />
+    <Compile Include="Server\Services\AccountService.cs" />
+    <Compile Include="Server\Helpers\PasswordHelper.cs" />
     <EmbeddedResource Include="Components\InputText.resx">
       <DependentUpon>InputText.cs</DependentUpon>
     </EmbeddedResource>
@@ -170,11 +171,11 @@
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
     </EmbeddedResource>
-    <EntityDeploy Include="server\Models\TworldDBModels.edmx">
+    <EntityDeploy Include="Shared\Models\TworldDBModels.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>TworldDBModels.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="server\Models\TworldDBModels.edmx.diagram">
+    <None Include="Shared\Models\TworldDBModels.edmx.diagram">
       <DependentUpon>TworldDBModels.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
@@ -198,12 +199,12 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="server\Models\TworldDBModels.Context.tt">
+    <Content Include="Shared\Models\TworldDBModels.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>TworldDBModels.edmx</DependentUpon>
       <LastGenOutput>TworldDBModels.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="server\Models\TworldDBModels.tt">
+    <Content Include="Shared\Models\TworldDBModels.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>TworldDBModels.edmx</DependentUpon>
       <LastGenOutput>TworldDBModels.cs</LastGenOutput>

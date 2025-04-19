@@ -6,7 +6,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using T.world.server.Models;
+using T.world.Shared.Models;
 using T.world.server.Services.common;
 using T.world.server.Services.Helpers;
 
@@ -14,7 +14,6 @@ namespace T.world.Services
 {
     class AccountService
     {
-
         public ServiceResult RegisterAccount(string firstName, string lastName, string email, string phone, string password, string address)
         {
             using (var db = new TworldDBEntities())

@@ -7,20 +7,26 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace T.world.server.Models
+namespace T.world.Shared.Models
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Products_images
+    public partial class Payment
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Payment()
+        {
+            this.Orders = new HashSet<Order>();
+        }
+    
         public System.Guid id { get; set; }
-        public System.Guid product_id { get; set; }
-        public string name { get; set; }
-        public string source { get; set; }
+        public string payment_method { get; set; }
+        public string payment_status { get; set; }
         public Nullable<System.DateTime> created_at { get; set; }
         public Nullable<System.DateTime> updated_at { get; set; }
     
-        public virtual Product Product { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Order> Orders { get; set; }
     }
 }

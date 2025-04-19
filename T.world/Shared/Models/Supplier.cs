@@ -7,31 +7,27 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace T.world.server.Models
+namespace T.world.Shared.Models
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Order
+    public partial class Supplier
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Order()
+        public Supplier()
         {
-            this.Products_Orders = new HashSet<Products_Orders>();
+            this.Batches = new HashSet<Batch>();
         }
     
         public System.Guid id { get; set; }
-        public System.Guid account_id { get; set; }
-        public System.Guid payment_id { get; set; }
-        public Nullable<decimal> total_price { get; set; }
-        public string status { get; set; }
-        public string deliver { get; set; }
+        public string name { get; set; }
+        public string phone { get; set; }
+        public string location { get; set; }
         public Nullable<System.DateTime> created_at { get; set; }
         public Nullable<System.DateTime> updated_at { get; set; }
     
-        public virtual Account Account { get; set; }
-        public virtual Payment Payment { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Products_Orders> Products_Orders { get; set; }
+        public virtual ICollection<Batch> Batches { get; set; }
     }
 }

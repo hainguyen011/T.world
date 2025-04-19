@@ -7,22 +7,17 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace T.world.server.Models
+namespace T.world.Shared.Models
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Products_Orders
+    public partial class SubCategory
     {
         public System.Guid id { get; set; }
-        public System.Guid order_id { get; set; }
-        public System.Guid product_id { get; set; }
-        public Nullable<decimal> price_sold { get; set; }
-        public Nullable<int> quantity { get; set; }
-        public Nullable<System.DateTime> created_at { get; set; }
-        public Nullable<System.DateTime> updated_at { get; set; }
+        public System.Guid category_id { get; set; }
+        public string name { get; set; }
     
-        public virtual Order Order { get; set; }
-        public virtual Product Product { get; set; }
+        public virtual Category Category { get; set; }
     }
 }
