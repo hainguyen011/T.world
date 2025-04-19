@@ -7,17 +7,17 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace T.world.server.Models
+namespace T.world.Shared.Models
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class SubCategory
+    public partial class Brand
     {
         public System.Guid id { get; set; }
-        public System.Guid category_id { get; set; }
         public string name { get; set; }
-    
-        public virtual Category Category { get; set; }
+        public string description { get; set; }
+        public Nullable<System.DateTime> created_at { get; set; }
+        public Nullable<System.DateTime> updated_at { get; set; }
     }
 }

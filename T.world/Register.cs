@@ -9,7 +9,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using T.world.server.Models;
+using T.world.Shared.Models;
 using T.world.Services;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 

@@ -7,26 +7,26 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace T.world.server.Models
+namespace T.world.Shared.Models
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Category
+    public partial class Specification
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Category()
+        public Specification()
         {
-            this.SubCategories = new HashSet<SubCategory>();
-            this.Products = new HashSet<Product>();
+            this.Products_specs = new HashSet<Products_specs>();
         }
     
         public System.Guid id { get; set; }
-        public string name { get; set; }
+        public string label { get; set; }
+        public string description { get; set; }
+        public Nullable<System.DateTime> created_at { get; set; }
+        public Nullable<System.DateTime> updated_at { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<SubCategory> SubCategories { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Product> Products { get; set; }
+        public virtual ICollection<Products_specs> Products_specs { get; set; }
     }
 }

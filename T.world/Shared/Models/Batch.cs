@@ -7,25 +7,22 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace T.world.server.Models
+namespace T.world.Shared.Models
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Products_Promotions
+    public partial class Batch
     {
         public System.Guid id { get; set; }
-        public string title { get; set; }
         public System.Guid product_id { get; set; }
-        public System.Guid promotion_id { get; set; }
-        public Nullable<decimal> discount { get; set; }
-        public Nullable<System.DateTime> start_date { get; set; }
-        public Nullable<System.DateTime> end_date { get; set; }
+        public System.Guid supplier_id { get; set; }
+        public Nullable<decimal> purchare_price { get; set; }
+        public Nullable<int> quality { get; set; }
         public Nullable<System.DateTime> created_at { get; set; }
         public Nullable<System.DateTime> updated_at { get; set; }
-        public string status { get; set; }
     
         public virtual Product Product { get; set; }
-        public virtual Promotion Promotion { get; set; }
+        public virtual Supplier Supplier { get; set; }
     }
 }
