@@ -43,12 +43,12 @@ namespace T.world
             using (var db = new TworldDBEntities())
             {
 
-                string firstName = "Hai";
-                string lastName = "Nguyen";
-                string email = "2054050053hai@ou.edu.vn";
-                string phone = "0909876541";
-                string password = "123456";
-                string address = "TP.HCM, Trái Đất";
+                string firstName = txtFName.Text;
+                string lastName = txtLName.Text;
+                string email = txtEmail.Text;
+                string phone = txtPhone.Text;
+                string password = txtPass.Text;
+                string address = txtAddress.Text;
 
                 var registedResult = _accountService.RegisterAccount(firstName, lastName, email, phone, password, address);
                 if (registedResult.Success)
@@ -65,6 +65,11 @@ namespace T.world
         }
 
         private void inputText1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }

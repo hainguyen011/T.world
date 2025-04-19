@@ -31,8 +31,8 @@ namespace T.world
         
         private void Login_Clicked(object sender, EventArgs e)
         {
-            string emailOrPhone = "2054050053hai@ou.edu.vn";
-            string password = "123456";
+            string emailOrPhone = txtEmail.Text;
+            string password = txtPassword.Text;
 
             var result = _accountService.Login(emailOrPhone, password);
 
@@ -49,12 +49,20 @@ namespace T.world
         private void Register_Clicked(object sender, EventArgs e)
         {
 
-            using (SqlConnection connect = DatabaseConnection.GetConnection())
-            {
-                SqlCommand cmd = new SqlCommand();
-                var email = this.email.Text;
-                var password = this.password.Text;
-            }
+            this.Hide(); // Ẩn form hiện tại 
+
+            // Tạo form Register
+            Register registerForm = new Register();
+
+            // Hiển thị form Register
+            registerForm.ShowDialog();
+
+            this.Show(); // Hiện lại form sau khi Register đóng
+        }
+
+        private void Login_title_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

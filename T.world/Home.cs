@@ -19,25 +19,25 @@ namespace T.world
 
         private void Home_Load(object sender, EventArgs e)
         {
-            // Lấy kích thước màn hình
-            int screenWidth = Screen.PrimaryScreen.Bounds.Width;
-            int screenHeight = Screen.PrimaryScreen.Bounds.Height;
+            //// Lấy kích thước màn hình
+            //int screenWidth = Screen.PrimaryScreen.Bounds.Width;
+            //int screenHeight = Screen.PrimaryScreen.Bounds.Height;
 
-            // Kích thước form mong muốn (80%)
-            int formWidth = (int)(screenWidth * 0.8);
-            int formHeight = (int)(screenHeight * 0.8);
+            //// Kích thước form mong muốn (80%)
+            //int formWidth = (int)(screenWidth * 0.8);
+            //int formHeight = (int)(screenHeight * 0.8);
 
-            // Gán kích thước
-            this.Width = formWidth;
-            this.Height = formHeight;
+            //// Gán kích thước
+            //this.Width = formWidth;
+            //this.Height = formHeight;
 
-            // Tính toán vị trí để căn giữa
-            int posX = (screenWidth - formWidth) / 2;
-            int posY = (screenHeight - formHeight) / 2;
+            //// Tính toán vị trí để căn giữa
+            //int posX = (screenWidth - formWidth) / 2;
+            //int posY = (screenHeight - formHeight) / 2;
 
-            // Gán vị trí
-            this.StartPosition = FormStartPosition.Manual;
-            this.Location = new Point(posX, posY);
+            //// Gán vị trí
+            //this.StartPosition = FormStartPosition.Manual;
+            //this.Location = new Point(posX, posY);
 
         }
 
@@ -114,6 +114,32 @@ namespace T.world
         private void pictureBox8_Click(object sender, EventArgs e)
         {
 
+        }
+
+        
+
+        private void button8_Click_1(object sender, EventArgs e)
+        {
+            
+
+            // Tạo form Login
+            Login loginForm = new Login();
+
+            // Hiển thị form Login
+            loginForm.ShowDialog();
+
+            this.Show(); // Hiện lại form sau khi Login đóng
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            // Tạo form Register
+            Register registerForm = new Register();
+
+            // Hiển thị form Register
+            registerForm.ShowDialog();
+
+            this.Show(); // Hiện lại form sau khi Register đóng
         }
     }
 }
