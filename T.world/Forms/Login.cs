@@ -5,6 +5,7 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,14 +22,18 @@ namespace T.world
         {
             InitializeComponent();
             _accountService = new AccountService();
+
+            
+
         }
 
 
         private void Login_Load(object sender, EventArgs e)
         {
+            this.ActiveControl = Login_title;
 
         }
-        
+
         private void Login_Clicked(object sender, EventArgs e)
         {
             string emailOrPhone = txtEmail.Text;
@@ -64,5 +69,58 @@ namespace T.world
         {
 
         }
+        private bool isPasswordHidden = true;
+        private void pcEye_Click(object sender, EventArgs e)
+        {
+            string imageFolder = @"D:\LTCSDL\Picture"; // Đường dẫn đến thư mục chứa ảnh
+            string openEyePath = Path.Combine(imageFolder, "eye_open.png");
+            string closedEyePath = Path.Combine(imageFolder, "eye_closed.png");
+
+            if (isPasswordHidden)
+            {
+                txtPassword.PasswordChar = '\0'; // Hiện mật khẩu
+
+                if (File.Exists(openEyePath))
+                {
+                    pcEye.Image = Image.FromFile(openEyePath);
+                }
+            }
+            else
+            {
+                txtPassword.PasswordChar = '*'; // Ẩn mật khẩu
+
+                if (File.Exists(closedEyePath))
+                {
+                    pcEye.Image = Image.FromFile(closedEyePath);
+                }
+            }
+
+            // Cập nhật trạng thái
+            isPasswordHidden = !isPasswordHidden;
+
+            // Đảm bảo ảnh hiển thị đúng kích thước
+            pcEye.SizeMode = PictureBoxSizeMode.StretchImage;
+        }
+        
+        
+        ////////////////// sự kiện nahapj ô Login email or phone
+        
+        private void txtEmail_Enter(object sender, EventArgs e)
+        {
+            if (txtEmail.Text == "Email or Phone")
+            {
+                txtEmail.Text = "";
+                txtEmail.ForeColor = Color.Gray;
+            }
+        }
+        private void txtEmail_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtEmail.Text))
+            {
+                txtEmail.Text = "Email or Phone";
+                txtEmail.ForeColor = Color.Gray;
+            }
+        }
+
     }
 }
