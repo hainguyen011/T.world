@@ -9,62 +9,55 @@ using System.Windows.Forms;
 using T.world.Shared.Models;
 using T.world.server.Services.common;
 using T.world.server.Services.Helpers;
+using T.world.Server.Repositories;
 
 namespace T.world.Services
 {
     class AccountService
     {
+        private readonly AccountRepository _accountRepository;
+        public AccountService()
+        {
+            _accountRepository = new AccountRepository();
+        }
+
         public ServiceResult RegisterAccount(string firstName, string lastName, string email, string phone, string password, string address)
         {
-            using (var db = new TworldDBEntities())
+
+            if (_accountRepository.IsEmailExists(email))
+                return ServiceResult.Fail("Email đã được sử dụng.");
+
+            if (_accountRepository.IsPhoneExists(phone))
+                return ServiceResult.Fail("Số điện thoại đã được sử dụng.");
+
+            string salt = PasswordHelper.GenerateSalt();
+            string hashedPassword = PasswordHelper.HashPassword(password, salt);
+
+            var newAccount = new Account
             {
-                var existingAccount = db.Accounts.FirstOrDefault(a => 
-                    a.email == email || 
-                    a.phone == phone
-                );
+                id = Guid.NewGuid(),
+                first_name = firstName,
+                last_name = lastName,
+                email = email,
+                phone = phone,
+                password = hashedPassword,
+                address = address,
+                role = "USER",
+                salt = salt,
+                created_at = DateTime.Now,
+                updated_at = DateTime.Now
+            };
 
-                if (existingAccount != null)
-                {
-                    if (existingAccount.email == email)
-                    {
-                        return ServiceResult.Fail("Email đã được sử dụng.");
-                    }
-                    else if (existingAccount.phone == phone)
-                    {
-                        return ServiceResult.Fail("Số điện thoại đã được sử dụng.");
-                    }
-                }
-
-                string salt = PasswordHelper.GenerateSalt();
-                string hashedPassword = PasswordHelper.HashPassword(password, salt);
-
-                var newAccount = new Account
-                {
-                    id = Guid.NewGuid(), 
-                    first_name = firstName,
-                    last_name = lastName,
-                    email = email,
-                    phone = phone,
-                    password = hashedPassword,
-                    address = address,
-                    role = "USER",
-                    salt = salt,
-                    created_at = DateTime.Now,
-                    updated_at = DateTime.Now
-                };
-
-                db.Accounts.Add(newAccount);
-
-                try
-                {
-                    db.SaveChanges();
-                    return ServiceResult.Ok("Đăng ký thành công!");
-                }
-                catch (Exception ex)
-                {
-                    var inner = ex.InnerException?.InnerException?.Message ?? ex.Message;
-                    return ServiceResult.Fail("Lỗi hệ thống: " + inner);
-                }
+            try
+            {
+                _accountRepository.Create(newAccount);
+                _accountRepository.Save();
+                return ServiceResult.Ok("Đăng ký thành công!");
+            }
+            catch (Exception ex)
+            {
+                var inner = ex.InnerException?.InnerException?.Message ?? ex.Message;
+                return ServiceResult.Fail("Lỗi hệ thống: " + inner);
             }
         }
 
@@ -82,6 +75,7 @@ namespace T.world.Services
                 string storedSalt = account.salt;
 
                 bool isPasswordCorrect = PasswordHelper.VerifyPassword(password, storedHashedPassword, storedSalt);
+                MessageBox.Show(password);
 
                 if (isPasswordCorrect)
                 {
@@ -89,7 +83,7 @@ namespace T.world.Services
                 }
                 else
                 {
-                    return ServiceResult.Fail("Mật khẩu không đúng. " + PasswordHelper.HashPassword(password, storedSalt));
+                    return ServiceResult.Fail("Mật khẩu không đúng. ");
                 }
             }
         }
