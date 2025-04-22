@@ -142,5 +142,10 @@ namespace T.world
 
             this.Show(); // Hiện lại form sau khi Register đóng
         }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
