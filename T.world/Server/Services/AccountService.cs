@@ -23,6 +23,7 @@ namespace T.world.Services
 
         public ServiceResult RegisterAccount(string firstName, string lastName, string email, string phone, string password, string address)
         {
+           
 
             if (_accountRepository.IsEmailExists(email))
                 return ServiceResult.Fail("Email đã được sử dụng.");
@@ -75,7 +76,7 @@ namespace T.world.Services
                 string storedSalt = account.salt;
 
                 bool isPasswordCorrect = PasswordHelper.VerifyPassword(password, storedHashedPassword, storedSalt);
-                MessageBox.Show(password);
+                
 
                 if (isPasswordCorrect)
                 {
