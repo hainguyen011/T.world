@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using T.world.Forms.Admin;
 
 namespace T.world
 {
@@ -16,7 +17,7 @@ namespace T.world
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Home());
+            Application.Run(new Dashboard());
         }
     }
 }

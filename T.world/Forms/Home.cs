@@ -15,6 +15,7 @@ namespace T.world
         public Home()
         {
             InitializeComponent();
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void Home_Load(object sender, EventArgs e)
@@ -24,8 +25,8 @@ namespace T.world
             //int screenHeight = Screen.PrimaryScreen.Bounds.Height;
 
             //// Kích thước form mong muốn (80%)
-            //int formWidth = (int)(screenWidth * 0.8);
-            //int formHeight = (int)(screenHeight * 0.8);
+            //int formWidth = (int)(screenWidth * 1);
+            //int formHeight = (int)(screenHeight * 1);
 
             //// Gán kích thước
             //this.Width = formWidth;
@@ -140,6 +141,11 @@ namespace T.world
             registerForm.ShowDialog();
 
             this.Show(); // Hiện lại form sau khi Register đóng
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
