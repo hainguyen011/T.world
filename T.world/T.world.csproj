@@ -103,11 +103,35 @@
     <Compile Include="Forms\Admin\OrderManagement.Designer.cs">
       <DependentUpon>OrderManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Admin\Payment\Payment_CreateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\Payment\Payment_CreateForm.Designer.cs">
+      <DependentUpon>Payment_CreateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\Payment\Payment_UpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\Payment\Payment_UpdateForm.Designer.cs">
+      <DependentUpon>Payment_UpdateForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Admin\Product\Product_CreateForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Admin\Product\Product_CreateForm.Designer.cs">
       <DependentUpon>Product_CreateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\Promotions\Promotions_CreateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\Promotions\Promotions_CreateForm.Designer.cs">
+      <DependentUpon>Promotions_CreateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\Promotions\Promotions_UpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\Promotions\Promotions_UpdateForm.Designer.cs">
+      <DependentUpon>Promotions_UpdateForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Admin\Supplier\Supplier_CreateForm.cs">
       <SubType>Form</SubType>
@@ -245,8 +269,17 @@
     <EmbeddedResource Include="Forms\Admin\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\Payment\Payment_CreateForm.resx">
+      <DependentUpon>Payment_CreateForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Admin\Product\Product_CreateForm.resx">
       <DependentUpon>Product_CreateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\Promotions\Promotions_CreateForm.resx">
+      <DependentUpon>Promotions_CreateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\Promotions\Promotions_UpdateForm.resx">
+      <DependentUpon>Promotions_UpdateForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Admin\Supplier\Supplier_CreateForm.resx">
       <DependentUpon>Supplier_CreateForm.cs</DependentUpon>

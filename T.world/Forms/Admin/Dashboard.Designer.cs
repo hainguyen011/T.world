@@ -44,11 +44,18 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.button3 = new System.Windows.Forms.Button();
+            this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.btnAddPromotions = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.suppDataGridView)).BeginInit();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tabPage6.SuspendLayout();
+            this.tabPage8.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -58,19 +65,23 @@
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage6);
+            this.tabControl1.Controls.Add(this.tabPage8);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1001, 567);
+            this.tabControl1.Size = new System.Drawing.Size(751, 461);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage2
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(993, 538);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage2.Size = new System.Drawing.Size(743, 435);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Thống kê";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -78,20 +89,22 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(993, 538);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage3.Size = new System.Drawing.Size(743, 435);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Quản lý sản phẩm";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // tabPage4
             // 
-            this.tabPage4.Location = new System.Drawing.Point(4, 25);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(993, 538);
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage4.Size = new System.Drawing.Size(743, 435);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Đơn hàng";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -101,10 +114,11 @@
             this.tabPage5.Controls.Add(this.suppDataGridView);
             this.tabPage5.Controls.Add(this.label1);
             this.tabPage5.Controls.Add(this.button1);
-            this.tabPage5.Location = new System.Drawing.Point(4, 25);
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(993, 538);
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage5.Size = new System.Drawing.Size(743, 435);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Nhà cung cấp";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -124,7 +138,8 @@
             this.suppDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.suppDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.suppDataGridView.GridColor = System.Drawing.SystemColors.ActiveBorder;
-            this.suppDataGridView.Location = new System.Drawing.Point(24, 77);
+            this.suppDataGridView.Location = new System.Drawing.Point(18, 63);
+            this.suppDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.suppDataGridView.Name = "suppDataGridView";
             this.suppDataGridView.RowHeadersWidth = 51;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
@@ -132,24 +147,27 @@
             dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.suppDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.suppDataGridView.RowTemplate.Height = 24;
-            this.suppDataGridView.Size = new System.Drawing.Size(947, 431);
+            this.suppDataGridView.Size = new System.Drawing.Size(710, 350);
             this.suppDataGridView.TabIndex = 4;
+            this.suppDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.suppDataGridView_CellContentClick);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 43);
+            this.label1.Location = new System.Drawing.Point(16, 35);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(154, 16);
+            this.label1.Size = new System.Drawing.Size(128, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "Danh sách nhà cung cấp";
             // 
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(767, 21);
+            this.button1.Location = new System.Drawing.Point(575, 17);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(204, 38);
+            this.button1.Size = new System.Drawing.Size(153, 31);
             this.button1.TabIndex = 0;
             this.button1.Text = "Thêm nhà cung cấp mới";
             this.button1.UseVisualStyleBackColor = true;
@@ -160,10 +178,11 @@
             this.tabPage1.Controls.Add(this.dataGridView1);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.button2);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(993, 538);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Size = new System.Drawing.Size(743, 435);
             this.tabPage1.TabIndex = 5;
             this.tabPage1.Text = "Danh mục";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -183,7 +202,8 @@
             this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveBorder;
-            this.dataGridView1.Location = new System.Drawing.Point(24, 82);
+            this.dataGridView1.Location = new System.Drawing.Point(18, 67);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
@@ -191,35 +211,86 @@
             dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(947, 431);
+            this.dataGridView1.Size = new System.Drawing.Size(710, 350);
             this.dataGridView1.TabIndex = 7;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(21, 48);
+            this.label2.Location = new System.Drawing.Point(16, 39);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(175, 16);
+            this.label2.Size = new System.Drawing.Size(143, 13);
             this.label2.TabIndex = 6;
             this.label2.Text = "Danh mục sản phẩm hiện có";
             // 
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(767, 26);
+            this.button2.Location = new System.Drawing.Point(575, 21);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(204, 38);
+            this.button2.Size = new System.Drawing.Size(153, 31);
             this.button2.TabIndex = 5;
             this.button2.Text = "Thêm danh mục";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.onCreateCategory_Clicked);
             // 
+            // tabPage6
+            // 
+            this.tabPage6.Controls.Add(this.button3);
+            this.tabPage6.Location = new System.Drawing.Point(4, 22);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Size = new System.Drawing.Size(743, 435);
+            this.tabPage6.TabIndex = 0;
+            this.tabPage6.Text = "Thương hiệu";
+            // 
+            // tabPage7
+            // 
+            this.tabPage7.Location = new System.Drawing.Point(0, 0);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Size = new System.Drawing.Size(200, 100);
+            this.tabPage7.TabIndex = 0;
+            this.tabPage7.Text = "Khuyễn mãi";
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(544, 19);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(165, 32);
+            this.button3.TabIndex = 0;
+            this.button3.Text = "Thêm thương hiệu";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // tabPage8
+            // 
+            this.tabPage8.Controls.Add(this.btnAddPromotions);
+            this.tabPage8.Location = new System.Drawing.Point(4, 22);
+            this.tabPage8.Name = "tabPage8";
+            this.tabPage8.Size = new System.Drawing.Size(743, 435);
+            this.tabPage8.TabIndex = 6;
+            this.tabPage8.Text = "Khuyến mãi";
+            this.tabPage8.UseVisualStyleBackColor = true;
+            // 
+            // btnAddPromotions
+            // 
+            this.btnAddPromotions.Location = new System.Drawing.Point(528, 27);
+            this.btnAddPromotions.Name = "btnAddPromotions";
+            this.btnAddPromotions.Size = new System.Drawing.Size(185, 49);
+            this.btnAddPromotions.TabIndex = 0;
+            this.btnAddPromotions.Text = "Thêm khuyến mãi";
+            this.btnAddPromotions.UseVisualStyleBackColor = true;
+            this.btnAddPromotions.Click += new System.EventHandler(this.btnAddPromotions_Click);
+            // 
             // Dashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1001, 567);
+            this.ClientSize = new System.Drawing.Size(751, 461);
             this.Controls.Add(this.tabControl1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Dashboard";
             this.Text = "Dashboard";
             this.Load += new System.EventHandler(this.Dashboard_Load);
@@ -230,6 +301,8 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tabPage6.ResumeLayout(false);
+            this.tabPage8.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -248,5 +321,10 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.TabPage tabPage7;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TabPage tabPage8;
+        private System.Windows.Forms.Button btnAddPromotions;
     }
 }

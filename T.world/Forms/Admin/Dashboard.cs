@@ -13,6 +13,8 @@ using T.world.Shared.DTOs;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using T.world.Shared.Models;
 using T.world.Forms.Admin.Category;
+using T.world.Forms.Admin.NewFolder1;
+using T.world.Forms.Admin.Promotions;
 
 namespace T.world.Forms.Admin
 {
@@ -102,6 +104,28 @@ namespace T.world.Forms.Admin
             cateCreateForm.Show();
             //suppCreateFrom.SupplierDataCreated += SupplierDataCreated_Handler;
             //suppCreateFrom.Show();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void suppDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Brand_CreateForm brandCreateForm = new Brand_CreateForm();
+            brandCreateForm.Show();
+        }
+
+        private void btnAddPromotions_Click(object sender, EventArgs e)
+        {
+            Promotions_CreateForm promotions_Create = new Promotions_CreateForm();
+            promotions_Create.Show();
         }
     }
 }
