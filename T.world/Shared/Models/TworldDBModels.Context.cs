@@ -40,5 +40,6 @@ namespace T.world.Shared.Models
         public virtual DbSet<Specification> Specifications { get; set; }
         public virtual DbSet<SubCategory> SubCategories { get; set; }
         public virtual DbSet<Supplier> Suppliers { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
     }
 }

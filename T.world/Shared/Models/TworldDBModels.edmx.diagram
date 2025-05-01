@@ -6,13 +6,13 @@
     <edmx:Diagrams>
       <Diagram DiagramId="4a075c96b84440fabe0b4ac990e2d2a4" Name="Diagram1">
         <EntityTypeShape EntityType="TworldDBModel.Account" Width="1.5" PointX="3.75" PointY="17.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="TworldDBModel.Batch" Width="1.5" PointX="5.25" PointY="7" IsExpanded="true" />
-        <EntityTypeShape EntityType="TworldDBModel.Brand" Width="1.5" PointX="10.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TworldDBModel.Batch" Width="1.5" PointX="5.375" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TworldDBModel.Brand" Width="1.5" PointX="9" PointY="4.125" IsExpanded="true" />
         <EntityTypeShape EntityType="TworldDBModel.Category" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
         <EntityTypeShape EntityType="TworldDBModel.Order" Width="1.5" PointX="6" PointY="18.75" IsExpanded="true" />
         <EntityTypeShape EntityType="TworldDBModel.Payment" Width="1.5" PointX="3.75" PointY="21.25" IsExpanded="true" />
         <EntityTypeShape EntityType="TworldDBModel.Product" Width="1.5" PointX="3" PointY="6.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="TworldDBModel.Products_images" Width="1.5" PointX="5.75" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TworldDBModel.Products_images" Width="1.5" PointX="5.875" PointY="11" IsExpanded="true" />
         <EntityTypeShape EntityType="TworldDBModel.Products_Orders" Width="1.5" PointX="8.25" PointY="7" IsExpanded="true" />
         <EntityTypeShape EntityType="TworldDBModel.Products_Promotions" Width="1.5" PointX="5.25" PointY="2.625" IsExpanded="true" />
         <EntityTypeShape EntityType="TworldDBModel.Products_specs" Width="1.5" PointX="10" PointY="1" IsExpanded="true" />
@@ -32,6 +32,7 @@
         <AssociationConnector Association="TworldDBModel.FK__Products___produ__02FC7413" ManuallyRouted="false" />
         <AssociationConnector Association="TworldDBModel.FK__Products___promo__03F0984C" ManuallyRouted="false" />
         <AssociationConnector Association="TworldDBModel.FK__Products___Speci__04E4BC85" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="TworldDBModel.sysdiagram" Width="1.5" PointX="10.375" PointY="7.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

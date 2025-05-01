@@ -17,10 +17,13 @@ namespace T.world.Shared.Models
         public System.Guid id { get; set; }
         public System.Guid product_id { get; set; }
         public System.Guid supplier_id { get; set; }
-        public Nullable<decimal> purchare_price { get; set; }
-        public Nullable<int> quality { get; set; }
         public Nullable<System.DateTime> created_at { get; set; }
         public Nullable<System.DateTime> updated_at { get; set; }
+        public Nullable<decimal> purchase_price { get; set; }
+        public Nullable<int> amount { get; set; }
+        public System.DateTime import_date { get; set; }
+        public string notes { get; set; }
+        public string batch_code { get; set; }
     
         public virtual Product Product { get; set; }
         public virtual Supplier Supplier { get; set; }

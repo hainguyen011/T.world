@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace T.world.Forms.Admin
+namespace T.world.Forms.Admin.Category
 {
-    public partial class ProductManagement: Form
+    public partial class Category_UpdateForm: Form
     {
-        public ProductManagement()
+        public Category_UpdateForm()
         {
             InitializeComponent();
         }

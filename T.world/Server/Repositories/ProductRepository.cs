@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing.Printing;
 using System.Linq;
 using T.world.Shared.Models;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace T.world.Server.Repositories
 {
@@ -15,9 +17,20 @@ namespace T.world.Server.Repositories
         }
 
         // Lấy tất cả sản phẩm
-        public List<Product> GetAll()
+        public List<Product> GetAll(string keyword, int page, int pageSize)
         {
-            return _dbContext.Products.ToList();
+            var query = _dbContext.Products.AsQueryable();
+
+            if (!string.IsNullOrWhiteSpace(keyword))
+            {
+                query = query.Where(s => s.name.Contains(keyword));
+            }
+
+            return query
+                .OrderBy(s => s.name)
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .ToList();
         }
 
         // Lấy sản phẩm theo ID

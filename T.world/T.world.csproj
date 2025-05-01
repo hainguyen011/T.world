@@ -66,6 +66,18 @@
       <DependentUpon>InputText.cs</DependentUpon>
     </Compile>
     <Compile Include="Config\DatabaseConnection.cs" />
+    <Compile Include="Forms\Admin\Category\Category_CreateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\Category\Category_CreateForm.Designer.cs">
+      <DependentUpon>Category_CreateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\Category\Category_UpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\Category\Category_UpdateForm.Designer.cs">
+      <DependentUpon>Category_UpdateForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Admin\Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,11 +90,23 @@
     <Compile Include="Forms\Admin\OrderManagement.Designer.cs">
       <DependentUpon>OrderManagement.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Admin\ProductManagement.cs">
+    <Compile Include="Forms\Admin\Product\Product_CreateForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Admin\ProductManagement.Designer.cs">
-      <DependentUpon>ProductManagement.cs</DependentUpon>
+    <Compile Include="Forms\Admin\Product\Product_CreateForm.Designer.cs">
+      <DependentUpon>Product_CreateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\Supplier\Supplier_CreateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\Supplier\Supplier_CreateForm.Designer.cs">
+      <DependentUpon>Supplier_CreateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\Supplier\Supplier_UpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\Supplier\Supplier_UpdateForm.Designer.cs">
+      <DependentUpon>Supplier_UpdateForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Admin\UserManagement.cs">
       <SubType>Form</SubType>
@@ -102,8 +126,19 @@
     <Compile Include="Forms\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Server\Repositories\BatchRepository.cs" />
+    <Compile Include="Server\Repositories\BrandRepository.cs" />
+    <Compile Include="Server\Repositories\CategoryRepository.cs" />
     <Compile Include="Server\Repositories\ProductRepository.cs" />
+    <Compile Include="Server\Repositories\SupplierRepository.cs" />
+    <Compile Include="Server\Services\BatchService.cs" />
+    <Compile Include="Server\Services\CategoryService.cs" />
     <Compile Include="Server\Services\ProductService.cs" />
+    <Compile Include="Server\Services\SupplierService.cs" />
+    <Compile Include="Shared\DTOs\BatchDTO.cs" />
+    <Compile Include="Shared\DTOs\CategoryDTO.cs" />
+    <Compile Include="Shared\DTOs\ProductDTO.cs" />
+    <Compile Include="Shared\DTOs\SupplierDTO.cs" />
     <Compile Include="Shared\Models\Account.cs">
       <DependentUpon>TworldDBModels.tt</DependentUpon>
     </Compile>
@@ -149,6 +184,9 @@
     <Compile Include="Shared\Models\Supplier.cs">
       <DependentUpon>TworldDBModels.tt</DependentUpon>
     </Compile>
+    <Compile Include="Shared\Models\sysdiagram.cs">
+      <DependentUpon>TworldDBModels.tt</DependentUpon>
+    </Compile>
     <Compile Include="Shared\Models\TworldDBModels.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -178,6 +216,24 @@
     <Compile Include="Server\Helpers\PasswordHelper.cs" />
     <EmbeddedResource Include="Components\InputText.resx">
       <DependentUpon>InputText.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\Category\Category_CreateForm.resx">
+      <DependentUpon>Category_CreateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\Category\Category_UpdateForm.resx">
+      <DependentUpon>Category_UpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\Product\Product_CreateForm.resx">
+      <DependentUpon>Product_CreateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\Supplier\Supplier_CreateForm.resx">
+      <DependentUpon>Supplier_CreateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\Supplier\Supplier_UpdateForm.resx">
+      <DependentUpon>Supplier_UpdateForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
