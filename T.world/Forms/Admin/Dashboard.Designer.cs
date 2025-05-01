@@ -32,7 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabBrand = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
@@ -49,31 +49,34 @@
             this.button3 = new System.Windows.Forms.Button();
             this.tabPage8 = new System.Windows.Forms.TabPage();
             this.btnAddPromotions = new System.Windows.Forms.Button();
-            this.tabControl1.SuspendLayout();
+            this.dgvBrand = new System.Windows.Forms.DataGridView();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.tabBrand.SuspendLayout();
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.suppDataGridView)).BeginInit();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage6.SuspendLayout();
             this.tabPage8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBrand)).BeginInit();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // tabBrand
             // 
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Controls.Add(this.tabPage5);
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage6);
-            this.tabControl1.Controls.Add(this.tabPage8);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(751, 461);
-            this.tabControl1.TabIndex = 0;
+            this.tabBrand.Controls.Add(this.tabPage2);
+            this.tabBrand.Controls.Add(this.tabPage3);
+            this.tabBrand.Controls.Add(this.tabPage4);
+            this.tabBrand.Controls.Add(this.tabPage5);
+            this.tabBrand.Controls.Add(this.tabPage1);
+            this.tabBrand.Controls.Add(this.tabPage6);
+            this.tabBrand.Controls.Add(this.tabPage8);
+            this.tabBrand.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabBrand.Location = new System.Drawing.Point(0, 0);
+            this.tabBrand.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabBrand.Name = "tabBrand";
+            this.tabBrand.SelectedIndex = 0;
+            this.tabBrand.Size = new System.Drawing.Size(751, 461);
+            this.tabBrand.TabIndex = 0;
             // 
             // tabPage2
             // 
@@ -239,6 +242,8 @@
             // 
             // tabPage6
             // 
+            this.tabPage6.Controls.Add(this.btnUpdate);
+            this.tabPage6.Controls.Add(this.dgvBrand);
             this.tabPage6.Controls.Add(this.button3);
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
@@ -256,7 +261,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(544, 19);
+            this.button3.Location = new System.Drawing.Point(307, 19);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(165, 32);
             this.button3.TabIndex = 0;
@@ -276,7 +281,7 @@
             // 
             // btnAddPromotions
             // 
-            this.btnAddPromotions.Location = new System.Drawing.Point(528, 27);
+            this.btnAddPromotions.Location = new System.Drawing.Point(325, 20);
             this.btnAddPromotions.Name = "btnAddPromotions";
             this.btnAddPromotions.Size = new System.Drawing.Size(185, 49);
             this.btnAddPromotions.TabIndex = 0;
@@ -284,17 +289,35 @@
             this.btnAddPromotions.UseVisualStyleBackColor = true;
             this.btnAddPromotions.Click += new System.EventHandler(this.btnAddPromotions_Click);
             // 
+            // dgvBrand
+            // 
+            this.dgvBrand.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvBrand.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBrand.Location = new System.Drawing.Point(3, 57);
+            this.dgvBrand.Name = "dgvBrand";
+            this.dgvBrand.Size = new System.Drawing.Size(732, 370);
+            this.dgvBrand.TabIndex = 1;
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(528, 19);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(165, 32);
+            this.btnUpdate.TabIndex = 2;
+            this.btnUpdate.Text = "Cập nhập thương hiệu";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(751, 461);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.tabBrand);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Dashboard";
             this.Text = "Dashboard";
             this.Load += new System.EventHandler(this.Dashboard_Load);
-            this.tabControl1.ResumeLayout(false);
+            this.tabBrand.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.suppDataGridView)).EndInit();
@@ -303,13 +326,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPage6.ResumeLayout(false);
             this.tabPage8.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBrand)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl tabBrand;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
@@ -326,5 +350,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TabPage tabPage8;
         private System.Windows.Forms.Button btnAddPromotions;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.DataGridView dgvBrand;
     }
 }
