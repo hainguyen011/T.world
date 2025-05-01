@@ -34,21 +34,37 @@ namespace T.world
 
         }
 
+        // check null
+        public bool isEmpty(string str)
+        {
+            if (string.IsNullOrEmpty(str)) return true;
+            return false;
+
+        }
+
         private void Login_Clicked(object sender, EventArgs e)
         {
             string emailOrPhone = txtEmail.Text;
             string password = txtPassword.Text;
 
-            var result = _accountService.Login(emailOrPhone, password);
+            if (string.IsNullOrEmpty(emailOrPhone) || string.IsNullOrEmpty(password))
+            {
+                MessageBox.Show("Thông tin không được bỏ trống", "Thông tin không hợp lệ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
-            if (result.Success)
-            {
-                MessageBox.Show("Đăng nhập thành công!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else
-            {
-                MessageBox.Show(result.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else {
+                var result = _accountService.Login(emailOrPhone, password);
+
+                if (result.Success)
+                {
+                    MessageBox.Show("Đăng nhập thành công!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show(result.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
+            
         }
 
         private void Register_Clicked(object sender, EventArgs e)
