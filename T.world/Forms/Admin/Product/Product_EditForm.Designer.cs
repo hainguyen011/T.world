@@ -1,6 +1,6 @@
 ﻿namespace T.world.Forms.Admin.Product
 {
-    partial class Product_CreateForm
+    partial class Product_EditForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Product_CreateForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Product_EditForm));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.brandComboBox = new System.Windows.Forms.ComboBox();
@@ -54,11 +54,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.Location = new System.Drawing.Point(65, 32);
+            this.label1.Location = new System.Drawing.Point(65, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(230, 20);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "THÔNG TIN SẢN PHẨM MỚI";
+            this.label1.Size = new System.Drawing.Size(194, 20);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "THÔNG TIN SẢN PHẨM";
             // 
             // panel1
             // 
@@ -81,12 +81,11 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.proName);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(35, 42);
+            this.panel1.Location = new System.Drawing.Point(35, 43);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.panel1.Size = new System.Drawing.Size(972, 657);
-            this.panel1.TabIndex = 3;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.panel1.Size = new System.Drawing.Size(972, 557);
+            this.panel1.TabIndex = 5;
             // 
             // brandComboBox
             // 
@@ -101,7 +100,6 @@
             this.brandComboBox.Name = "brandComboBox";
             this.brandComboBox.Size = new System.Drawing.Size(235, 37);
             this.brandComboBox.TabIndex = 18;
-            this.brandComboBox.SelectedIndexChanged += new System.EventHandler(this.brandComboBox_SelectedIndexChanged);
             // 
             // cateComboBox
             // 
@@ -116,7 +114,6 @@
             this.cateComboBox.Name = "cateComboBox";
             this.cateComboBox.Size = new System.Drawing.Size(427, 37);
             this.cateComboBox.TabIndex = 17;
-            this.cateComboBox.SelectedIndexChanged += new System.EventHandler(this.cateComboBox_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -139,8 +136,6 @@
             this.proPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.proPicture.TabIndex = 15;
             this.proPicture.TabStop = false;
-            this.proPicture.Click += new System.EventHandler(this.proPicture_Click);
-            this.proPicture.Paint += new System.Windows.Forms.PaintEventHandler(this.ProductImage_Paint);
             // 
             // proDesc
             // 
@@ -189,7 +184,6 @@
             this.proPrice.Name = "proPrice";
             this.proPrice.Size = new System.Drawing.Size(282, 37);
             this.proPrice.TabIndex = 10;
-            this.proPrice.TextChanged += new System.EventHandler(this.priceSell_TextChanged);
             // 
             // label6
             // 
@@ -208,20 +202,18 @@
             this.label4.Size = new System.Drawing.Size(72, 16);
             this.label4.TabIndex = 5;
             this.label4.Text = "Nhãn hàng";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button2.AutoSize = true;
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Location = new System.Drawing.Point(33, 584);
+            this.button2.Location = new System.Drawing.Point(33, 484);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(226, 48);
             this.button2.TabIndex = 0;
-            this.button2.Text = "Thêm sản phẩm";
+            this.button2.Text = "Lưu thông tin";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.OnCreate_Clicked);
             // 
             // label3
             // 
@@ -251,16 +243,16 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Tên sản phẩm";
             // 
-            // Product_CreateForm
+            // Product_EditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1037, 772);
+            this.ClientSize = new System.Drawing.Size(1043, 651);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
-            this.Name = "Product_CreateForm";
-            this.Text = "Product_Create";
-            this.Load += new System.EventHandler(this.Product_CreateForm_Load);
+            this.Name = "Product_EditForm";
+            this.Text = "Product_EditForm";
+            this.Load += new System.EventHandler(this.Product_EditForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.proPicture)).EndInit();
@@ -273,20 +265,20 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ComboBox brandComboBox;
+        private System.Windows.Forms.ComboBox cateComboBox;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.PictureBox proPicture;
+        private System.Windows.Forms.TextBox proDesc;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox proQuantity;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox proPrice;
+        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox proName;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox proPrice;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox proDesc;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox proQuantity;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.PictureBox proPicture;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox cateComboBox;
-        private System.Windows.Forms.ComboBox brandComboBox;
     }
 }

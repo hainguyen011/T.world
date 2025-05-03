@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace T.world.Shared.DTOs
 {
-    class CategoryDTO
+    public class CategoryDTO
     {
         public string name { get; set; }
     }

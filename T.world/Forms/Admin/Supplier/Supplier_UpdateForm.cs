@@ -15,33 +15,54 @@ namespace T.world.Forms.Admin.Supplier
 {
     public partial class Supplier_UpdateForm: Form
     {
-
+        private SupplierDTO supplier;
         private readonly SupplierService _supplierService;
-        public Supplier_UpdateForm()
+        public event EventHandler SupplierDataReload;
+
+
+        public Supplier_UpdateForm(SupplierDTO supplierData)
         {
             InitializeComponent();
             _supplierService = new SupplierService();
+            supplier = supplierData;
+        }
+
+        private void OnSupplierDataReload()
+        {
+            SupplierDataReload?.Invoke(this, EventArgs.Empty);
         }
 
         private void Supplier_UpdateForm_Load(object sender, EventArgs e)
         {
-
+            this.suppName.Text = supplier.name;
+            this.suppPhone.Text = supplier.phone;
+            this.suppLocation.Text = supplier.location;
         }
 
         private void onUpdate_Clicked(object sender, EventArgs e)
         {
             using (var db = new TworldDBEntities())
             {
-
-                Guid suppId = new Guid();
-                SupplierDTO newSupplier = new SupplierDTO
+                SupplierDTO updateSupplier = new SupplierDTO
                 {
-                    name = "Samsung",
-                    phone = "bla bla",
-                    location = "Trái đất",
+                    name = this.suppName.Text,
+                    phone = this.suppPhone.Text,
+                    location = this.suppLocation.Text,
                 };
- 
-                var registedResult = _supplierService.UpdateSupplier(suppId, newSupplier);
+
+                
+                var response = _supplierService.UpdateSupplier(supplier.id ?? Guid.Empty, updateSupplier);
+                if (response.Success)
+                {
+                    MessageBox.Show(response.Message);
+                    OnSupplierDataReload();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show(response.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
             }
         }
 

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6596f6c432fc40da8385661788372d2f" Name="Diagram1">
+        <EntityTypeShape EntityType="TworldDBModel.Account" Width="1.5" PointX="3.75" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TworldDBModel.Batch" Width="1.5" PointX="5.125" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TworldDBModel.Brand" Width="1.5" PointX="10.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TworldDBModel.Category" Width="1.5" PointX="0.75" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TworldDBModel.Order" Width="1.5" PointX="6" PointY="17.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TworldDBModel.Payment" Width="1.5" PointX="3.75" PointY="19.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TworldDBModel.Products_images" Width="1.5" PointX="5.25" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TworldDBModel.Products_Orders" Width="1.5" PointX="8.25" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TworldDBModel.Products_Promotions" Width="1.5" PointX="8.25" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="TworldDBModel.Products_specs" Width="1.5" PointX="13" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="TworldDBModel.Promotion" Width="1.5" PointX="6" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TworldDBModel.Specification" Width="1.5" PointX="10.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TworldDBModel.SubCategory" Width="1.5" PointX="3" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TworldDBModel.Supplier" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TworldDBModel.sysdiagram" Width="1.5" PointX="10.75" PointY="7.75" IsExpanded="true" />
+        <AssociationConnector Association="TworldDBModel.FK__Orders__account___7D439ABD" ManuallyRouted="false" />
+        <AssociationConnector Association="TworldDBModel.FK__Batches__supplie__7C4F7684" ManuallyRouted="false" />
+        <AssociationConnector Association="TworldDBModel.FK_Categories_SubCategories" ManuallyRouted="false" />
+        <AssociationConnector Association="TworldDBModel.FK__Orders__payment___7E37BEF6" ManuallyRouted="false" />
+        <AssociationConnector Association="TworldDBModel.FK__Products___order__01142BA1" ManuallyRouted="false" />
+        <AssociationConnector Association="TworldDBModel.FK__Products___promo__03F0984C" ManuallyRouted="false" />
+        <AssociationConnector Association="TworldDBModel.FK__Products___Speci__04E4BC85" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="TworldDBModel.Product" Width="1.5" PointX="2.125" PointY="21.75" />
+        <AssociationConnector Association="TworldDBModel.FK__Batches__product__7B5B524B" />
+        <AssociationConnector Association="TworldDBModel.FK_Products_Categories" />
+        <AssociationConnector Association="TworldDBModel.FK__Products___produ__00200768" />
+        <AssociationConnector Association="TworldDBModel.FK__Products___produ__02084FDA" />
+        <AssociationConnector Association="TworldDBModel.FK__Products___produ__02FC7413" />
+        <AssociationConnector Association="TworldDBModel.FK_product_brand" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

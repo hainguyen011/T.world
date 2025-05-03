@@ -30,14 +30,14 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.suppLocation = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.suppPhone = new System.Windows.Forms.TextBox();
+            this.edit_button = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.suppName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,10 +58,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.suppLocation);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.suppPhone);
+            this.panel1.Controls.Add(this.edit_button);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.suppName);
             this.panel1.Controls.Add(this.label2);
@@ -71,15 +71,26 @@
             this.panel1.Size = new System.Drawing.Size(757, 442);
             this.panel1.TabIndex = 3;
             // 
-            // textBox2
+            // button2
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox2.ForeColor = System.Drawing.Color.Black;
-            this.textBox2.Location = new System.Drawing.Point(185, 156);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(518, 37);
-            this.textBox2.TabIndex = 6;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.Location = new System.Drawing.Point(40, 350);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(156, 48);
+            this.button2.TabIndex = 7;
+            this.button2.Text = "Reset";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.onReset_Clicked);
+            // 
+            // suppLocation
+            // 
+            this.suppLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.suppLocation.ForeColor = System.Drawing.Color.Black;
+            this.suppLocation.Location = new System.Drawing.Point(185, 156);
+            this.suppLocation.Multiline = true;
+            this.suppLocation.Name = "suppLocation";
+            this.suppLocation.Size = new System.Drawing.Size(518, 37);
+            this.suppLocation.TabIndex = 6;
             // 
             // label4
             // 
@@ -90,26 +101,26 @@
             this.label4.TabIndex = 5;
             this.label4.Text = "Địa chỉ";
             // 
-            // textBox1
+            // suppPhone
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(185, 108);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(357, 37);
-            this.textBox1.TabIndex = 4;
+            this.suppPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.suppPhone.ForeColor = System.Drawing.Color.Black;
+            this.suppPhone.Location = new System.Drawing.Point(185, 108);
+            this.suppPhone.Multiline = true;
+            this.suppPhone.Name = "suppPhone";
+            this.suppPhone.Size = new System.Drawing.Size(357, 37);
+            this.suppPhone.TabIndex = 4;
             // 
-            // button1
+            // edit_button
             // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Location = new System.Drawing.Point(202, 350);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(518, 48);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Lưu thông tin";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.onUpdate_Clicked);
+            this.edit_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.edit_button.Location = new System.Drawing.Point(202, 350);
+            this.edit_button.Name = "edit_button";
+            this.edit_button.Size = new System.Drawing.Size(518, 48);
+            this.edit_button.TabIndex = 0;
+            this.edit_button.Text = "Lưu thông tin";
+            this.edit_button.UseVisualStyleBackColor = true;
+            this.edit_button.Click += new System.EventHandler(this.onUpdate_Clicked);
             // 
             // label3
             // 
@@ -139,17 +150,6 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Tên nhà cung cấp";
             // 
-            // button2
-            // 
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Location = new System.Drawing.Point(40, 350);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(156, 48);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Reset";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.onReset_Clicked);
-            // 
             // Supplier_UpdateForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -171,13 +171,13 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox suppLocation;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button edit_button;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox suppName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox suppPhone;
     }
 }

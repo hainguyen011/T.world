@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Xml.Linq;
 using T.world.server.Services.common;
 using T.world.Server.Repositories;
+using T.world.Shared.DTOs;
 using T.world.Shared.Models;
 
 namespace T.world.Server.Services
@@ -41,15 +42,14 @@ namespace T.world.Server.Services
 
             var newProduct = new Product
             {
-                id = Guid.NewGuid(),  // Automatically generate a new Guid
+                id = Guid.NewGuid(),  
                 name = product.name,
                 category_id = product.categoryId,
                 brand_id = product.brandId,
-                pro_spec_id = product.proSpecId,
-                title = product.title,
-                short_desc = product.shortDesc,
                 description = product.description,
                 price_sell = product.priceSell,
+                quantity = product.quantity,
+                image = product.image,  
                 created_at = DateTime.Now,
                 updated_at = DateTime.Now
             };

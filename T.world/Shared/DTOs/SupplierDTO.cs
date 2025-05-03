@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace T.world.Shared.DTOs
 {
-    class SupplierDTO
+    public class SupplierDTO
     {
+        public Guid? id { get; set; }
         public string name { get; set; }
         public string phone { get; set; }
         public string location { get; set; }

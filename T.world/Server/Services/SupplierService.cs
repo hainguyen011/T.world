@@ -85,11 +85,11 @@ namespace T.world.Server.Services
             {
                 var existedSupplier = _supplierRepository.GetById(supplierId);
 
-                if (supplier == null)
+                if (existedSupplier == null)
                     return ServiceResult.Fail("Nhà phân phối không tồn tại.");
 
                 // Kiểm tra nếu số điện thoại đã tồn tại
-                if (_supplierRepository.IsPhoneExists(supplier.phone) && supplier.phone != supplier.phone)
+                if (_supplierRepository.IsPhoneExists(supplier.phone) && supplier.phone != existedSupplier.phone)
                     return ServiceResult.Fail("Số điện thoại này đã được sử dụng.");
 
                 // Cập nhật thông tin

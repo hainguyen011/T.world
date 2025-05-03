@@ -17,10 +17,18 @@ namespace T.world.Forms.Admin.Category
     public partial class Category_CreateForm: Form
     {
         private readonly CategoryService _categoryService;
+
+        public event EventHandler DataReload;
+
         public Category_CreateForm()
         {
             InitializeComponent();
             _categoryService = new CategoryService();
+        }
+
+        private void OnDataReload()
+        {
+            DataReload?.Invoke(this, EventArgs.Empty);
         }
 
         private void Category_CreateForm_Load(object sender, EventArgs e)
@@ -53,7 +61,7 @@ namespace T.world.Forms.Admin.Category
                 if (registedResult.Success)
                 {
                     MessageBox.Show(registedResult.Message);
-                    //OnSupplierDataCreated();
+                    OnDataReload();
                     this.Close();
                 }
                 else

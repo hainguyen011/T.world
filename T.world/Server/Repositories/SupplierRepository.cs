@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using T.world.Shared.Models;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
@@ -32,10 +34,11 @@ namespace T.world.Server.Repositories
                 .OrderBy(s => s.name)
                 .Skip((page - 1) * pageSize)
                 .Take(pageSize)
+                .AsNoTracking()
                 .ToList();
         }
 
-        // Lấy sản phẩm theo ID
+        // Lấy Nhà phân phối theo ID
         public Supplier GetById(Guid SupplierId)
         {
             return _dbContext.Suppliers.FirstOrDefault(p => p.id == SupplierId);
@@ -54,23 +57,25 @@ namespace T.world.Server.Repositories
             return _dbContext.Suppliers.Any(a => a.phone == phone);
         }
 
-        // Thêm sản phẩm
+        // Thêm Nhà phân phối
         public void Create(Supplier Supplier)
         {
             _dbContext.Suppliers.Add(Supplier);
         }
 
-        // Cập nhật sản phẩm
-        public void Update(Supplier Supplier)
+        // Cập nhật Nhà phân phối
+        public void Update(Supplier supplier)
         {
-            var existing = GetById(Supplier.id);
+            var existing = GetById(supplier.id);
+
             if (existing != null)
             {
-                _dbContext.Entry(existing).CurrentValues.SetValues(Supplier);
+                _dbContext.Entry(existing).CurrentValues.SetValues(supplier);
+                _dbContext.Entry(existing).State = EntityState.Modified;
             }
         }
 
-        // Xoá sản phẩm
+        // Xoá Nhà phân phối
         public void Delete(Guid SupplierId)
         {
             var Supplier = GetById(SupplierId);

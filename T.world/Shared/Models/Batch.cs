@@ -25,7 +25,7 @@ namespace T.world.Shared.Models
         public string notes { get; set; }
         public string batch_code { get; set; }
     
-        public virtual Product Product { get; set; }
         public virtual Supplier Supplier { get; set; }
+        public virtual Product Product { get; set; }
     }
 }

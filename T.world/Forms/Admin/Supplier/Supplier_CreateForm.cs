@@ -23,10 +23,12 @@ namespace T.world.Forms.Admin.Supplier
             _supplierService = new SupplierService();
 
         }
-        public event EventHandler SupplierDataCreated;
-        private void OnSupplierDataCreated()
+
+
+        public event EventHandler SupplierDataReload;
+        private void OnSupplierDataReload()
         {
-            SupplierDataCreated?.Invoke(this, EventArgs.Empty);
+            SupplierDataReload?.Invoke(this, EventArgs.Empty);
         }
 
         private void Supplier_CreateForm_Load(object sender, EventArgs e)
@@ -52,7 +54,7 @@ namespace T.world.Forms.Admin.Supplier
                 if (registedResult.Success)
                 {
                     MessageBox.Show(registedResult.Message);
-                    OnSupplierDataCreated();
+                    OnSupplierDataReload();
                     this.Close();
                 }
                 else
