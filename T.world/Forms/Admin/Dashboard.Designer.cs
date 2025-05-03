@@ -159,6 +159,7 @@
             this.suppDataGridView.RowTemplate.Height = 24;
             this.suppDataGridView.Size = new System.Drawing.Size(1180, 645);
             this.suppDataGridView.TabIndex = 4;
+            this.suppDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.suppDataGridView_CellContentClick);
             // 
             // label1
             // 
@@ -329,6 +330,73 @@
             this.label2.Size = new System.Drawing.Size(197, 25);
             this.label2.TabIndex = 5;
             this.label2.Text = "Danh sách sản phẩm";
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.Controls.Add(this.btnUpdate);
+            this.tabPage6.Controls.Add(this.dgvBrand);
+            this.tabPage6.Controls.Add(this.button3);
+            this.tabPage6.Location = new System.Drawing.Point(4, 22);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Size = new System.Drawing.Size(743, 435);
+            this.tabPage6.TabIndex = 0;
+            this.tabPage6.Text = "Thương hiệu";
+            // 
+            // tabPage7
+            // 
+            this.tabPage7.Location = new System.Drawing.Point(0, 0);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Size = new System.Drawing.Size(200, 100);
+            this.tabPage7.TabIndex = 0;
+            this.tabPage7.Text = "Khuyễn mãi";
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(307, 19);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(165, 32);
+            this.button3.TabIndex = 0;
+            this.button3.Text = "Thêm thương hiệu";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // tabPage8
+            // 
+            this.tabPage8.Controls.Add(this.btnAddPromotions);
+            this.tabPage8.Location = new System.Drawing.Point(4, 22);
+            this.tabPage8.Name = "tabPage8";
+            this.tabPage8.Size = new System.Drawing.Size(743, 435);
+            this.tabPage8.TabIndex = 6;
+            this.tabPage8.Text = "Khuyến mãi";
+            this.tabPage8.UseVisualStyleBackColor = true;
+            // 
+            // btnAddPromotions
+            // 
+            this.btnAddPromotions.Location = new System.Drawing.Point(325, 20);
+            this.btnAddPromotions.Name = "btnAddPromotions";
+            this.btnAddPromotions.Size = new System.Drawing.Size(185, 49);
+            this.btnAddPromotions.TabIndex = 0;
+            this.btnAddPromotions.Text = "Thêm khuyến mãi";
+            this.btnAddPromotions.UseVisualStyleBackColor = true;
+            this.btnAddPromotions.Click += new System.EventHandler(this.btnAddPromotions_Click);
+            // 
+            // dgvBrand
+            // 
+            this.dgvBrand.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvBrand.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBrand.Location = new System.Drawing.Point(3, 57);
+            this.dgvBrand.Name = "dgvBrand";
+            this.dgvBrand.Size = new System.Drawing.Size(732, 370);
+            this.dgvBrand.TabIndex = 1;
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(528, 19);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(165, 32);
+            this.btnUpdate.TabIndex = 2;
+            this.btnUpdate.Text = "Cập nhập thương hiệu";
+            this.btnUpdate.UseVisualStyleBackColor = true;
             // 
             // Dashboard
             // 

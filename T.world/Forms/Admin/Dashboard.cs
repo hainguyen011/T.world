@@ -500,5 +500,27 @@ namespace T.world.Forms.Admin
         {
 
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void suppDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Brand_CreateForm brandCreateForm = new Brand_CreateForm();
+            brandCreateForm.Show();
+        }
+
+        private void btnAddPromotions_Click(object sender, EventArgs e)
+        {
+            Promotions_CreateForm promotions_Create = new Promotions_CreateForm();
+            promotions_Create.Show();
+        }
     }
 }

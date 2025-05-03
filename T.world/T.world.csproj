@@ -67,6 +67,12 @@
       <DependentUpon>InputText.cs</DependentUpon>
     </Compile>
     <Compile Include="Config\DatabaseConnection.cs" />
+    <Compile Include="Forms\Admin\Brand\Brand_UpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\Brand\Brand_UpdateForm.Designer.cs">
+      <DependentUpon>Brand_UpdateForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Admin\Category\Category_CreateForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +97,18 @@
     </Compile>
     <Compile Include="Forms\Admin\OrderManagement.Designer.cs">
       <DependentUpon>OrderManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\Payment\Payment_CreateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\Payment\Payment_CreateForm.Designer.cs">
+      <DependentUpon>Payment_CreateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\Payment\Payment_UpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\Payment\Payment_UpdateForm.Designer.cs">
+      <DependentUpon>Payment_UpdateForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Admin\Product\Product_CreateForm.cs">
       <SubType>Form</SubType>
@@ -227,6 +245,12 @@
     <EmbeddedResource Include="Components\InputText.resx">
       <DependentUpon>InputText.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\Brand\Brand_CreateForm.resx">
+      <DependentUpon>Brand_CreateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\Brand\Brand_UpdateForm.resx">
+      <DependentUpon>Brand_UpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Admin\Category\Category_CreateForm.resx">
       <DependentUpon>Category_CreateForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -235,6 +259,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Admin\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\Payment\Payment_CreateForm.resx">
+      <DependentUpon>Payment_CreateForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Admin\Product\Product_CreateForm.resx">
       <DependentUpon>Product_CreateForm.cs</DependentUpon>
