@@ -1,15 +1,22 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-public class ProductDTO
+namespace T.world.Shared.DTOs
 {
-    public string name { get; set; }
-    public Guid categoryId { get; set; }
-    public Guid brandId { get; set; }
-    public Guid proSpecId { get; set; }
-    public string title { get; set; }
-    public string shortDesc { get; set; }
-    public string description { get; set; }
-    public decimal priceSell { get; set; }
-    public DateTime createdAt { get; set; }
-    public DateTime updatedAt { get; set; }
+    public class ProductDTO
+    {
+        public Guid? id { get; set; }
+        public string name { get; set; }
+        public Guid categoryId { get; set; }
+        public Guid brandId { get; set; }
+        public string image { get; set; }
+        public string description { get; set; }
+        public decimal priceSell { get; set; }
+        public int quantity { get; set; }
+        public DateTime createdAt { get; set; }
+        public DateTime updatedAt { get; set; }
+    }
 }

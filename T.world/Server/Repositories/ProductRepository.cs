@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Drawing.Printing;
 using System.Linq;
 using T.world.Shared.Models;
@@ -30,6 +31,7 @@ namespace T.world.Server.Repositories
                 .OrderBy(s => s.name)
                 .Skip((page - 1) * pageSize)
                 .Take(pageSize)
+                .AsNoTracking()
                 .ToList();
         }
 

@@ -27,13 +27,12 @@ namespace T.world.Shared.Models
         public string name { get; set; }
         public System.Guid category_id { get; set; }
         public System.Guid brand_id { get; set; }
-        public System.Guid pro_spec_id { get; set; }
-        public string title { get; set; }
-        public string short_desc { get; set; }
         public string description { get; set; }
         public Nullable<decimal> price_sell { get; set; }
         public Nullable<System.DateTime> created_at { get; set; }
         public Nullable<System.DateTime> updated_at { get; set; }
+        public Nullable<int> quantity { get; set; }
+        public string image { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Batch> Batches { get; set; }
@@ -44,5 +43,6 @@ namespace T.world.Shared.Models
         public virtual ICollection<Products_Orders> Products_Orders { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Products_Promotions> Products_Promotions { get; set; }
+        public virtual Brand Brand { get; set; }
     }
 }

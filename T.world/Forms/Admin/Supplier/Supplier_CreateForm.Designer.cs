@@ -45,7 +45,7 @@
             // button1
             // 
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Location = new System.Drawing.Point(32, 331);
+            this.button1.Location = new System.Drawing.Point(32, 376);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(226, 48);
             this.button1.TabIndex = 0;
@@ -69,7 +69,7 @@
             this.panel1.Location = new System.Drawing.Point(20, 46);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.panel1.Size = new System.Drawing.Size(755, 419);
+            this.panel1.Size = new System.Drawing.Size(755, 453);
             this.panel1.TabIndex = 1;
             // 
             // suppLocation

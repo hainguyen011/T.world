@@ -31,7 +31,6 @@ namespace T.world.Shared.Models
         public virtual DbSet<Category> Categories { get; set; }
         public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<Payment> Payments { get; set; }
-        public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<Products_images> Products_images { get; set; }
         public virtual DbSet<Products_Orders> Products_Orders { get; set; }
         public virtual DbSet<Products_Promotions> Products_Promotions { get; set; }
@@ -41,5 +40,6 @@ namespace T.world.Shared.Models
         public virtual DbSet<SubCategory> SubCategories { get; set; }
         public virtual DbSet<Supplier> Suppliers { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
+        public virtual DbSet<Product> Products { get; set; }
     }
 }

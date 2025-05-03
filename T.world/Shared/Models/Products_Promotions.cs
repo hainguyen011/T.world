@@ -25,7 +25,7 @@ namespace T.world.Shared.Models
         public Nullable<System.DateTime> updated_at { get; set; }
         public string status { get; set; }
     
-        public virtual Product Product { get; set; }
         public virtual Promotion Promotion { get; set; }
+        public virtual Product Product { get; set; }
     }
 }
