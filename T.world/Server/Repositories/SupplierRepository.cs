@@ -23,37 +23,20 @@ namespace T.world.Server.Repositories
         // Lấy tất cả nhà phân phối
         public List<Supplier> GetAll(string keyword, int page, int pageSize)
         {
-            int startRow = (page - 1) * pageSize + 1;
-            int endRow = startRow + pageSize - 1;
+            var query = _dbContext.Suppliers.AsQueryable();
 
-            string sql = @"
-        WITH OrderedSuppliers AS (
-            SELECT *, ROW_NUMBER() OVER (ORDER BY name) AS RowNum
-            FROM dbo.Supplier
-            WHERE (@keyword IS NULL OR name LIKE '%' + @keyword + '%')
-        )
-        SELECT *
-        FROM OrderedSuppliers
-        WHERE RowNum BETWEEN @startRow AND @endRow
-        ORDER BY RowNum;";
-
-            var suppliers = _dbContext.Database.SqlQuery<Supplier>(
-                sql,
-                new SqlParameter("@keyword", string.IsNullOrWhiteSpace(keyword) ? (object)DBNull.Value : keyword),
-                new SqlParameter("@startRow", startRow),
-                new SqlParameter("@endRow", endRow)
-            ).ToList();
-
-            return suppliers;
-        }
+            if (!string.IsNullOrWhiteSpace(keyword))
+            {
+                query = query.Where(b => b.name.Contains(keyword));
+            }
 
             return query
-                .OrderBy(s => s.name)
+                .OrderBy(b => b.name)
                 .Skip((page - 1) * pageSize)
                 .Take(pageSize)
-                .AsNoTracking()
                 .ToList();
         }
+
 
         // Lấy Nhà phân phối theo ID
         public Supplier GetById(Guid SupplierId)

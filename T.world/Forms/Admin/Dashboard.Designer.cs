@@ -28,15 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dashboard_tabcontrol = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.ProDatagridView = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.suppDataGridView = new System.Windows.Forms.DataGridView();
@@ -45,19 +49,21 @@
             this.label3 = new System.Windows.Forms.Label();
             this.cateDataGridView = new System.Windows.Forms.DataGridView();
             this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.deleteButton = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.ProDatagridView = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.dashboard_tabcontrol.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ProDatagridView)).BeginInit();
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.suppDataGridView)).BeginInit();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cateDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ProDatagridView)).BeginInit();
+            this.tabPage6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dashboard_tabcontrol
@@ -72,11 +78,11 @@
             this.dashboard_tabcontrol.Controls.Add(this.tabPage1);
             this.dashboard_tabcontrol.Controls.Add(this.tabPage6);
             this.dashboard_tabcontrol.Controls.Add(this.tabPage7);
-            this.dashboard_tabcontrol.Location = new System.Drawing.Point(0, 86);
+            this.dashboard_tabcontrol.Location = new System.Drawing.Point(0, 87);
             this.dashboard_tabcontrol.Margin = new System.Windows.Forms.Padding(4);
             this.dashboard_tabcontrol.Name = "dashboard_tabcontrol";
             this.dashboard_tabcontrol.SelectedIndex = 0;
-            this.dashboard_tabcontrol.Size = new System.Drawing.Size(1251, 819);
+            this.dashboard_tabcontrol.Size = new System.Drawing.Size(1250, 820);
             this.dashboard_tabcontrol.TabIndex = 0;
             this.dashboard_tabcontrol.SelectedIndexChanged += new System.EventHandler(this.Dashboard_Tabchanged);
             // 
@@ -86,7 +92,7 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage2.Size = new System.Drawing.Size(1243, 786);
+            this.tabPage2.Size = new System.Drawing.Size(1242, 787);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Thống kê";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -100,10 +106,51 @@
             this.tabPage3.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage3.Size = new System.Drawing.Size(1243, 786);
+            this.tabPage3.Size = new System.Drawing.Size(1242, 787);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Quản lý sản phẩm";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // ProDatagridView
+            // 
+            this.ProDatagridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ProDatagridView.BackgroundColor = System.Drawing.Color.White;
+            this.ProDatagridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.ProDatagridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ProDatagridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.ProDatagridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ProDatagridView.GridColor = System.Drawing.SystemColors.ActiveBorder;
+            this.ProDatagridView.Location = new System.Drawing.Point(33, 100);
+            this.ProDatagridView.Margin = new System.Windows.Forms.Padding(4);
+            this.ProDatagridView.Name = "ProDatagridView";
+            this.ProDatagridView.RowHeadersWidth = 51;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.ProDatagridView.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.ProDatagridView.RowTemplate.Height = 24;
+            this.ProDatagridView.Size = new System.Drawing.Size(1180, 645);
+            this.ProDatagridView.TabIndex = 6;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label2.Location = new System.Drawing.Point(29, 42);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(197, 25);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Danh sách sản phẩm";
             // 
             // tabPage4
             // 
@@ -111,7 +158,7 @@
             this.tabPage4.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage4.Size = new System.Drawing.Size(1243, 786);
+            this.tabPage4.Size = new System.Drawing.Size(1242, 787);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Đơn hàng";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -125,7 +172,7 @@
             this.tabPage5.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage5.Size = new System.Drawing.Size(1243, 786);
+            this.tabPage5.Size = new System.Drawing.Size(1242, 787);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Nhà cung cấp";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -159,7 +206,6 @@
             this.suppDataGridView.RowTemplate.Height = 24;
             this.suppDataGridView.Size = new System.Drawing.Size(1180, 645);
             this.suppDataGridView.TabIndex = 4;
-            this.suppDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.suppDataGridView_CellContentClick);
             // 
             // label1
             // 
@@ -181,7 +227,7 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage1.Size = new System.Drawing.Size(1243, 786);
+            this.tabPage1.Size = new System.Drawing.Size(1242, 787);
             this.tabPage1.TabIndex = 5;
             this.tabPage1.Text = "Danh mục";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -229,23 +275,66 @@
             // 
             // tabPage6
             // 
+            this.tabPage6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabPage6.Controls.Add(this.label4);
+            this.tabPage6.Controls.Add(this.dataGridView1);
             this.tabPage6.Location = new System.Drawing.Point(4, 29);
             this.tabPage6.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage6.Size = new System.Drawing.Size(1243, 786);
+            this.tabPage6.Size = new System.Drawing.Size(1242, 787);
             this.tabPage6.TabIndex = 6;
-            this.tabPage6.Text = "Nhãn hàng";
+            this.tabPage6.Text = "Thương hiệu";
             this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label4.Location = new System.Drawing.Point(26, 39);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(213, 25);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Danh sách thương hiệu";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveBorder;
+            this.dataGridView1.Location = new System.Drawing.Point(30, 94);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(1174, 548);
+            this.dataGridView1.TabIndex = 9;
             // 
             // tabPage7
             // 
             this.tabPage7.Location = new System.Drawing.Point(4, 29);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(1243, 786);
-            this.tabPage7.TabIndex = 7;
-            this.tabPage7.Text = "Thương hiệu";
+            this.tabPage7.Size = new System.Drawing.Size(1242, 787);
+            this.tabPage7.TabIndex = 0;
+            this.tabPage7.Text = "Khuyễn mãi";
             this.tabPage7.UseVisualStyleBackColor = true;
             // 
             // deleteButton
@@ -253,7 +342,7 @@
             this.deleteButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.deleteButton.BackColor = System.Drawing.Color.Red;
             this.deleteButton.ForeColor = System.Drawing.Color.White;
-            this.deleteButton.Location = new System.Drawing.Point(805, 38);
+            this.deleteButton.Location = new System.Drawing.Point(773, 38);
             this.deleteButton.Margin = new System.Windows.Forms.Padding(4);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(98, 40);
@@ -261,20 +350,6 @@
             this.deleteButton.Text = "Xóa";
             this.deleteButton.UseVisualStyleBackColor = false;
             this.deleteButton.Click += new System.EventHandler(this.onDelete_Clicked);
-            // 
-            // button3
-            // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(911, 38);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(135, 40);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Chỉnh sửa";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.onEdit_Clicked);
             // 
             // button1
             // 
@@ -290,113 +365,18 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.onCreate_Clicked);
             // 
-            // ProDatagridView
+            // button2
             // 
-            this.ProDatagridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ProDatagridView.BackgroundColor = System.Drawing.Color.White;
-            this.ProDatagridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.ProDatagridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ProDatagridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.ProDatagridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ProDatagridView.GridColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ProDatagridView.Location = new System.Drawing.Point(33, 100);
-            this.ProDatagridView.Margin = new System.Windows.Forms.Padding(4);
-            this.ProDatagridView.Name = "ProDatagridView";
-            this.ProDatagridView.RowHeadersWidth = 51;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.ProDatagridView.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.ProDatagridView.RowTemplate.Height = 24;
-            this.ProDatagridView.Size = new System.Drawing.Size(1180, 645);
-            this.ProDatagridView.TabIndex = 6;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label2.Location = new System.Drawing.Point(29, 42);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(197, 25);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Danh sách sản phẩm";
-            // 
-            // tabPage6
-            // 
-            this.tabPage6.Controls.Add(this.btnUpdate);
-            this.tabPage6.Controls.Add(this.dgvBrand);
-            this.tabPage6.Controls.Add(this.button3);
-            this.tabPage6.Location = new System.Drawing.Point(4, 22);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(743, 435);
-            this.tabPage6.TabIndex = 0;
-            this.tabPage6.Text = "Thương hiệu";
-            // 
-            // tabPage7
-            // 
-            this.tabPage7.Location = new System.Drawing.Point(0, 0);
-            this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Size = new System.Drawing.Size(200, 100);
-            this.tabPage7.TabIndex = 0;
-            this.tabPage7.Text = "Khuyễn mãi";
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(307, 19);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(165, 32);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "Thêm thương hiệu";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // tabPage8
-            // 
-            this.tabPage8.Controls.Add(this.btnAddPromotions);
-            this.tabPage8.Location = new System.Drawing.Point(4, 22);
-            this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Size = new System.Drawing.Size(743, 435);
-            this.tabPage8.TabIndex = 6;
-            this.tabPage8.Text = "Khuyến mãi";
-            this.tabPage8.UseVisualStyleBackColor = true;
-            // 
-            // btnAddPromotions
-            // 
-            this.btnAddPromotions.Location = new System.Drawing.Point(325, 20);
-            this.btnAddPromotions.Name = "btnAddPromotions";
-            this.btnAddPromotions.Size = new System.Drawing.Size(185, 49);
-            this.btnAddPromotions.TabIndex = 0;
-            this.btnAddPromotions.Text = "Thêm khuyến mãi";
-            this.btnAddPromotions.UseVisualStyleBackColor = true;
-            this.btnAddPromotions.Click += new System.EventHandler(this.btnAddPromotions_Click);
-            // 
-            // dgvBrand
-            // 
-            this.dgvBrand.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgvBrand.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBrand.Location = new System.Drawing.Point(3, 57);
-            this.dgvBrand.Name = "dgvBrand";
-            this.dgvBrand.Size = new System.Drawing.Size(732, 370);
-            this.dgvBrand.TabIndex = 1;
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Location = new System.Drawing.Point(528, 19);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(165, 32);
-            this.btnUpdate.TabIndex = 2;
-            this.btnUpdate.Text = "Cập nhập thương hiệu";
-            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.BackColor = System.Drawing.Color.MidnightBlue;
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(879, 38);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(167, 40);
+            this.button2.TabIndex = 7;
+            this.button2.Text = "Chỉnh sửa";
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // Dashboard
             // 
@@ -404,7 +384,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1251, 904);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.dashboard_tabcontrol);
             this.Controls.Add(this.button1);
@@ -416,13 +396,16 @@
             this.dashboard_tabcontrol.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ProDatagridView)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.suppDataGridView)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cateDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ProDatagridView)).EndInit();
+            this.tabPage6.ResumeLayout(false);
+            this.tabPage6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -441,10 +424,12 @@
         private System.Windows.Forms.DataGridView cateDataGridView;
         private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.Button deleteButton;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TabPage tabPage7;
         private System.Windows.Forms.DataGridView ProDatagridView;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

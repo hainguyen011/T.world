@@ -67,11 +67,17 @@
       <DependentUpon>InputText.cs</DependentUpon>
     </Compile>
     <Compile Include="Config\DatabaseConnection.cs" />
-    <Compile Include="Forms\Admin\Brand\Brand_UpdateForm.cs">
+    <Compile Include="Forms\Admin\Brand\Brand_CreateForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Admin\Brand\Brand_UpdateForm.Designer.cs">
-      <DependentUpon>Brand_UpdateForm.cs</DependentUpon>
+    <Compile Include="Forms\Admin\Brand\Brand_CreateForm.Designer.cs">
+      <DependentUpon>Brand_CreateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\Brand\Brand_EditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\Brand\Brand_EditForm.Designer.cs">
+      <DependentUpon>Brand_EditForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Admin\Category\Category_CreateForm.cs">
       <SubType>Form</SubType>
@@ -247,9 +253,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Admin\Brand\Brand_CreateForm.resx">
       <DependentUpon>Brand_CreateForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Admin\Brand\Brand_UpdateForm.resx">
-      <DependentUpon>Brand_UpdateForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Admin\Category\Category_CreateForm.resx">
       <DependentUpon>Category_CreateForm.cs</DependentUpon>

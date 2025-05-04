@@ -16,6 +16,7 @@ using T.world.Forms.Admin.Category;
 using System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder;
 using T.world.Forms.Admin.Product;
 using System.IO;
+using T.world.Forms.Admin.Brand;
 
 namespace T.world.Forms.Admin
 {
@@ -74,7 +75,7 @@ namespace T.world.Forms.Admin
         // Setup form styles
         private void FormStyles_Load(object sender, EventArgs e)
         {
-            //DeleteButton_Styles_handler();
+
         }
 
         // Load dữ liệu supplier
@@ -125,10 +126,7 @@ namespace T.world.Forms.Admin
             // Thêm một dòng cho mỗi nhà cung cấp
             foreach (var supplier in supplierList)
             {
-                //MessageBox.Show($"Supplier: {supplier.name}, Updated: {supplier.updated_at}");
-                // Tạo một mảng dữ liệu cho từng dòng
                 var row = new string[] { supplier.id.ToString(), supplier.name, supplier.phone, supplier.location, supplier.created_at.ToString(), supplier.updated_at.ToString() };
-
                 // Thêm dòng vào DataGridView
                 this.suppDataGridView.Rows.Add(row);
             };
@@ -365,7 +363,6 @@ namespace T.world.Forms.Admin
                 MessageBox.Show("Vui lòng chọn dữ liệu để thực hiện thao tác này ");
             }
         }
-
         private void onProEdit_Handler(object sender, EventArgs e)
         {
             if (ProDatagridView.SelectedRows.Count == 1)
@@ -493,6 +490,11 @@ namespace T.world.Forms.Admin
                     cateCreateForm.DataReload += CategoryDataReload_Handler;
                     cateCreateForm.Show();
                     break;
+                case 5:
+                    Brand_CreateForm brandCreateForm = new Brand_CreateForm();
+                    //brandCreateForm.DataReload += CategoryDataReload_Handler;
+                    brandCreateForm.Show();
+                    break;
             }
         }
 
@@ -501,26 +503,16 @@ namespace T.world.Forms.Admin
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void suppDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void button3_Click(object sender, EventArgs e)
         {
-            Brand_CreateForm brandCreateForm = new Brand_CreateForm();
-            brandCreateForm.Show();
+            //Brand_CreateForm brandCreateForm = new Brand_CreateForm();
+            //brandCreateForm.Show();
         }
 
         private void btnAddPromotions_Click(object sender, EventArgs e)
         {
-            Promotions_CreateForm promotions_Create = new Promotions_CreateForm();
-            promotions_Create.Show();
+            //Promotions_CreateForm promotions_Create = new Promotions_CreateForm();
+            //promotions_Create.Show();
         }
     }
 }
