@@ -10,6 +10,8 @@ using T.world.Shared.Models;
 using T.world.server.Services.common;
 using T.world.server.Services.Helpers;
 using T.world.Server.Repositories;
+using T.world.Server.Utilities;
+using T.world.Shared.DTOs;
 
 namespace T.world.Services
 {
@@ -20,6 +22,7 @@ namespace T.world.Services
         {
             _accountRepository = new AccountRepository();
         }
+
 
         public ServiceResult RegisterAccount(string firstName, string lastName, string email, string phone, string password, string address)
         {
@@ -62,14 +65,15 @@ namespace T.world.Services
             }
         }
 
-        public ServiceResult Login(string emailOrPhone, string password)
+        public ServiceResultLogin<LoginResult> Login(string emailOrPhone, string password)
         {
+
             using (var db = new TworldDBEntities())
             {
                 var account = db.Accounts.FirstOrDefault(a => a.email == emailOrPhone || a.phone == emailOrPhone);
                 if (account == null)
                 {
-                    return ServiceResult.Fail("Tài khoản không tồn tại.");
+                    return ServiceResultLogin<LoginResult>.Fail("Tài khoản không tồn tại.");
                 }
 
                 string storedHashedPassword = account.password;
@@ -80,13 +84,75 @@ namespace T.world.Services
 
                 if (isPasswordCorrect)
                 {
-                    return ServiceResult.Ok("Đăng nhập thành công! ");
+                    var loginResult = new LoginResult
+                    {
+                        Message = "Đăng nhập thành công!",
+                        Id = account.id.ToString(),
+                        Role = account.role,
+                        Email = account.email,
+                        Fullname = account.first_name + " " + account.last_name,
+
+                    };
+                    return ServiceResultLogin<LoginResult>.Ok(loginResult, "Đăng nhập thành công!");
                 }
                 else
                 {
-                    return ServiceResult.Fail("Mật khẩu không đúng. ");
+                    return ServiceResultLogin<LoginResult>.Fail("Mật khẩu không đúng.");
                 }
             }
         }
+
+        public List<Account> GetListAccount(string keyword, int page, int pageSize)
+        {
+            return _accountRepository.GetAll(keyword, page, pageSize);
+        }
+
+        public ServiceResult DeleteAccount(Guid id)
+        {
+            var existing = _accountRepository.GetById(id);
+            if (existing == null)
+                return ServiceResult.Fail("Tài khoản không tồn tại.");
+
+            try
+            {
+                _accountRepository.Delete(id);
+                _accountRepository.Save();
+                return ServiceResult.Ok("Xóa tài khoản thành công!");
+            }
+            catch (Exception ex)
+            {
+                var inner = ex.InnerException?.InnerException?.Message ?? ex.Message;
+                return ServiceResult.Fail("Lỗi hệ thống: " + inner);
+            }
+        }
+
+        public ServiceResult UpdateAccount(Guid id, AccountDTO updatedAccount)
+        {
+            var existing = _accountRepository.GetById(id);
+            if (existing == null)
+                return ServiceResult.Fail("Tài khoản không tồn tại.");
+
+            existing.first_name = updatedAccount.firstName;
+            existing.last_name = updatedAccount.lastName;
+            existing.email = updatedAccount.email;
+            existing.phone = updatedAccount.phone;
+            existing.address = updatedAccount.address;
+            existing.role = updatedAccount.role;
+            existing.updated_at = DateTime.Now;
+
+            try
+            {
+                _accountRepository.Update(existing);
+                _accountRepository.Save();
+                return ServiceResult.Ok("Cập nhật tài khoản thành công!");
+            }
+            catch (Exception ex)
+            {
+                var inner = ex.InnerException?.InnerException?.Message ?? ex.Message;
+                return ServiceResult.Fail("Lỗi hệ thống: " + inner);
+            }
+        }
+
+      
     }
 }

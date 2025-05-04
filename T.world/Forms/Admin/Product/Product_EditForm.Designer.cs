@@ -42,7 +42,7 @@
             this.proPrice = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.savebtn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.proName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -77,7 +77,7 @@
             this.panel1.Controls.Add(this.proPrice);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.savebtn);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.proName);
             this.panel1.Controls.Add(this.label2);
@@ -203,17 +203,18 @@
             this.label4.TabIndex = 5;
             this.label4.Text = "Nhãn hàng";
             // 
-            // button2
+            // savebtn
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button2.AutoSize = true;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Location = new System.Drawing.Point(33, 484);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(226, 48);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Lưu thông tin";
-            this.button2.UseVisualStyleBackColor = true;
+            this.savebtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.savebtn.AutoSize = true;
+            this.savebtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.savebtn.Location = new System.Drawing.Point(33, 484);
+            this.savebtn.Name = "savebtn";
+            this.savebtn.Size = new System.Drawing.Size(226, 48);
+            this.savebtn.TabIndex = 0;
+            this.savebtn.Text = "Lưu thông tin";
+            this.savebtn.UseVisualStyleBackColor = true;
+            this.savebtn.Click += new System.EventHandler(this.onEdit_Clicked);
             // 
             // label3
             // 
@@ -276,7 +277,7 @@
         private System.Windows.Forms.TextBox proPrice;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button savebtn;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox proName;
         private System.Windows.Forms.Label label2;

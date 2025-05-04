@@ -11,24 +11,25 @@ using T.world.Server.Services;
 using T.world.Shared.DTOs;
 using T.world.Shared.Models;
 
-namespace T.world.Forms.Admin.Brand
+namespace T.world.Forms.Admin.Category
 {
-    public partial class Brand_CreateForm: Form
+    public partial class Category_EditForm: Form
     {
-
-        private readonly BrandService _brandService;
+        private CategoryDTO category;
         public event EventHandler DataReload;
+        private readonly CategoryService _categoryService;
 
-        public Brand_CreateForm()
+
+        public Category_EditForm(CategoryDTO categoryData)
         {
             InitializeComponent();
-            _brandService = new BrandService(); 
-
+            category = categoryData;
+            _categoryService = new CategoryService();
         }
 
-        private void Brand_CreateForm_Load(object sender, EventArgs e)
+        private void Category_UpdateForm_Load(object sender, EventArgs e)
         {
-
+            this.cateName.Text = category.name;
         }
 
         private void OnDataReload()
@@ -36,18 +37,17 @@ namespace T.world.Forms.Admin.Brand
             DataReload?.Invoke(this, EventArgs.Empty);
         }
 
-        private void onBrand_Clicked(object sender, EventArgs e)
+        private void onSave_Clicked(object sender, EventArgs e)
         {
             using (var db = new TworldDBEntities())
             {
-
-                var newBrand = new BrandDTO
+                CategoryDTO categoryUpdate = new CategoryDTO
                 {
-                    name = this.brandName.Text,
-                    description = this.brandDesc.Text,
+                    name = this.cateName.Text,
                 };
 
-                var response = _brandService.CreateBrand(newBrand);
+
+                var response = _categoryService.UpdateCategory(category.id ?? Guid.Empty, categoryUpdate);
                 if (response.Success)
                 {
                     MessageBox.Show(response.Message);
@@ -61,6 +61,5 @@ namespace T.world.Forms.Admin.Brand
 
             }
         }
-
     }
 }

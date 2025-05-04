@@ -8,6 +8,7 @@ namespace T.world.Shared.DTOs
 {
     public class CategoryDTO
     {
+        public Guid? id { get; set; }
         public string name { get; set; }
     }
 }

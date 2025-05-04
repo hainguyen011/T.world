@@ -10,7 +10,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using T.world.Forms.Admin;
 using T.world.Services;
+using T.world.Shared.Models;
+using T.world.Shared.Sessions;
 
 namespace T.world
 {
@@ -18,6 +21,9 @@ namespace T.world
     {
 
         private readonly AccountService _accountService;
+        public event EventHandler result;
+
+
         public Login()
         {
             InitializeComponent();
@@ -30,8 +36,13 @@ namespace T.world
 
         private void Login_Load(object sender, EventArgs e)
         {
-            this.ActiveControl = Login_title;
+            
 
+        }
+
+        private void OnDataLogin()
+        {
+            result?.Invoke(this, EventArgs.Empty);
         }
 
         // check null
@@ -50,14 +61,27 @@ namespace T.world
             if (string.IsNullOrEmpty(emailOrPhone) || string.IsNullOrEmpty(password))
             {
                 MessageBox.Show("Thông tin không được bỏ trống", "Thông tin không hợp lệ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
             }
             else {
                 var result = _accountService.Login(emailOrPhone, password);
 
                 if (result.Success)
                 {
-                    MessageBox.Show("Đăng nhập thành công!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    var loginInfo = result.Data;
+                    if (loginInfo.Role == "ADMIN")
+                    {
+                        LoginSession.AccountId = Guid.Parse(loginInfo.Id);
+                        LoginSession.FullName = loginInfo.Fullname;
+                        LoginSession.Role = loginInfo.Role;
+                        LoginSession.Email = loginInfo.Email;
+                        OnDataLogin();
+                        MessageBox.Show("Đăng nhập thành công!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Tài khoản của bạn không có quyền truy cập!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
                 else
                 {

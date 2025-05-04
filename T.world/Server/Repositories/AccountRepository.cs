@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using T.world.Shared.Models;
 
@@ -14,8 +15,28 @@ namespace T.world.Server.Repositories
         {
             _dbContext = new TworldDBEntities();
         }
-        
-       
+
+        public List<Account> GetAll(string keyword, int page, int pageSize)
+        {
+            var query = _dbContext.Accounts.AsQueryable();
+
+            if (!string.IsNullOrWhiteSpace(keyword))
+            {
+                query = query.Where(a =>
+                    a.first_name.Contains(keyword) ||
+                    a.last_name.Contains(keyword) ||
+                    a.email.Contains(keyword) ||
+                    a.phone.Contains(keyword));
+            }
+
+            return query
+                .OrderBy(a => a.first_name)
+                .ThenBy(a => a.last_name)
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .AsNoTracking()
+                .ToList();
+        }
 
         // Lấy tài khoản theo email hoặc số điện thoại
         public Account GetExistedByEmailOrPhone(string emailOrPhone)
@@ -61,9 +82,13 @@ namespace T.world.Server.Repositories
         }
 
         // Xóa tài khoản
-        public void Delete(Account account)
+        public void Delete(Guid accountId)
         {
-            _dbContext.Accounts.Remove(account);
+            var account = GetById(accountId);
+            if (account != null)
+            {
+                _dbContext.Accounts.Remove(account);
+            }
         }
 
         // Lưu thay đổi vào database

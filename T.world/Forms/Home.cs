@@ -129,7 +129,7 @@ namespace T.world
             // Hiển thị form Login
             loginForm.ShowDialog();
 
-            this.Show(); // Hiện lại form sau khi Login đóng
+            this.Hide(); // Hiện lại form sau khi Login đóng
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -140,7 +140,8 @@ namespace T.world
             // Hiển thị form Register
             registerForm.ShowDialog();
 
-            this.Show(); // Hiện lại form sau khi Register đóng
+            // Hiện lại form sau khi Register đóng
+            this.Show(); 
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)

@@ -50,6 +50,12 @@ namespace T.world.Server.Repositories
         }
 
         // Thêm sản phẩm
+        public int GetTotalAmount()
+        {
+            return _dbContext.Products.Count(p => p.quantity > 0);
+        }
+
+        // Thêm sản phẩm
         public void Create(Product product)
         {
             _dbContext.Products.Add(product);

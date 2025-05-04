@@ -43,18 +43,19 @@ namespace T.world.Server.Services
         }
 
         // Cập nhật thương hiệu
-        public ServiceResult UpdateBrand(Guid brandId, string name)
+        public ServiceResult UpdateBrand(Guid brandId, BrandDTO brand)
         {
             try
             {
-                var brand = _brandRepository.GetById(brandId);
+                var brandExisted = _brandRepository.GetById(brandId);
                 if (brand == null)
                     return ServiceResult.Fail("Thương hiệu không tồn tại.");
 
-                brand.name = name;
-                brand.updated_at = DateTime.Now;
+                brandExisted.name = brand.name;
+                brandExisted.description = brand.description;
+                brandExisted.updated_at = DateTime.Now;
 
-                _brandRepository.Update(brand);
+                _brandRepository.Update(brandExisted);
                 _brandRepository.Save();
 
                 return ServiceResult.Ok("Cập nhật thương hiệu thành công!");

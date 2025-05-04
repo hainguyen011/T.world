@@ -1,6 +1,6 @@
 ﻿namespace T.world.Forms.Admin.Category
 {
-    partial class Category_UpdateForm
+    partial class Category_EditForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,9 +30,8 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.suppName = new System.Windows.Forms.TextBox();
+            this.cateName = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -56,37 +55,27 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Tên danh mục";
             // 
-            // suppName
+            // cateName
             // 
-            this.suppName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.suppName.ForeColor = System.Drawing.Color.Black;
-            this.suppName.Location = new System.Drawing.Point(185, 61);
-            this.suppName.Multiline = true;
-            this.suppName.Name = "suppName";
-            this.suppName.Size = new System.Drawing.Size(535, 37);
-            this.suppName.TabIndex = 2;
+            this.cateName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cateName.ForeColor = System.Drawing.Color.Black;
+            this.cateName.Location = new System.Drawing.Point(185, 61);
+            this.cateName.Multiline = true;
+            this.cateName.Name = "cateName";
+            this.cateName.Size = new System.Drawing.Size(535, 37);
+            this.cateName.TabIndex = 2;
             // 
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Location = new System.Drawing.Point(263, 141);
+            this.button1.Location = new System.Drawing.Point(40, 137);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(457, 48);
             this.button1.TabIndex = 0;
             this.button1.Text = "Lưu thông tin";
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Location = new System.Drawing.Point(40, 141);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(217, 48);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Reset";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.onSave_Clicked);
             // 
             // panel1
             // 
@@ -94,9 +83,8 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.suppName);
+            this.panel1.Controls.Add(this.cateName);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(22, 39);
             this.panel1.Name = "panel1";
@@ -104,15 +92,16 @@
             this.panel1.Size = new System.Drawing.Size(757, 206);
             this.panel1.TabIndex = 5;
             // 
-            // Category_UpdateForm
+            // Category_EditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 278);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
-            this.Name = "Category_UpdateForm";
+            this.Name = "Category_EditForm";
             this.Text = "Category_UpdateForm";
+            this.Load += new System.EventHandler(this.Category_UpdateForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -124,9 +113,8 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox suppName;
+        private System.Windows.Forms.TextBox cateName;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel1;
     }
 }

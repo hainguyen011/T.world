@@ -43,19 +43,19 @@ namespace T.world.Server.Services
         }
 
         // Cập nhật thông tin danh mục
-        public ServiceResult UpdateCategory(Guid categoryId, string name, string description)
+        public ServiceResult UpdateCategory(Guid categoryId, CategoryDTO category)
         {
             try
             {
-                var category = _categoryRepository.GetById(categoryId);
+                var existedCate = _categoryRepository.GetById(categoryId);
 
-                if (category == null)
+                if (existedCate == null)
                     return ServiceResult.Fail("Danh mục không tồn tại.");
 
-                category.name = name;
-                category.updated_at = DateTime.Now;
+                existedCate.name = category.name;
+                existedCate.updated_at = DateTime.Now;
 
-                _categoryRepository.Update(category);
+                _categoryRepository.Update(existedCate);
                 _categoryRepository.Save();
 
                 return ServiceResult.Ok("Cập nhật thành công!");

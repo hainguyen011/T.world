@@ -67,17 +67,26 @@ namespace T.world.Server.Services
         }
 
         // Cập nhật thông tin sản phẩm 
-        public ServiceResult UpdateProduct(Product product)
+        public ServiceResult UpdateProduct(Guid productId, ProductDTO product)
         {
             try
             {
-                var existing = _productRepository.GetById(product.id);
+                var existing = _productRepository.GetById(productId);
                 if (existing == null)
                     return ServiceResult.Fail("Sản phẩm không tồn tại.");
 
-                product.updated_at = DateTime.Now;
 
-                _productRepository.Update(product);
+                // Cập nhật thông tin
+                existing.name = product.name;
+                existing.description = product.description;
+                existing.price_sell = product.priceSell;
+                existing.quantity = product.quantity;
+                existing.image = product.image;
+                existing.category_id = product.categoryId;
+                existing.brand_id = product.brandId;
+                existing.updated_at = DateTime.Now;
+         
+                _productRepository.Update(existing);
                 _productRepository.Save();
 
                 return ServiceResult.Ok("Cập nhật sản phẩm thành công!");
@@ -129,6 +138,10 @@ namespace T.world.Server.Services
             return (int)Math.Ceiling((double)total / pageSize);
         }
 
-
+        public int GetTotalProductInStock()
+        {
+            int total = _productRepository.GetTotalAmount();
+            return total;
+        }
     }
 }

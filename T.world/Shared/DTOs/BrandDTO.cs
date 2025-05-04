@@ -8,7 +8,7 @@ namespace T.world.Shared.DTOs
 {
     public class BrandDTO
     {
-        public Guid id { get; set; }
+        public Guid? id { get; set; }
         public string name { get; set; }
         public string description { get; set; }
         public DateTime? created_at { get; set; }

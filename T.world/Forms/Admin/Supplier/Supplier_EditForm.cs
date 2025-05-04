@@ -13,14 +13,14 @@ using T.world.Shared.Models;
 
 namespace T.world.Forms.Admin.Supplier
 {
-    public partial class Supplier_UpdateForm: Form
+    public partial class Supplier_EditForm: Form
     {
         private SupplierDTO supplier;
         private readonly SupplierService _supplierService;
         public event EventHandler SupplierDataReload;
 
 
-        public Supplier_UpdateForm(SupplierDTO supplierData)
+        public Supplier_EditForm(SupplierDTO supplierData)
         {
             InitializeComponent();
             _supplierService = new SupplierService();

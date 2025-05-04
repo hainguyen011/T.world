@@ -67,6 +67,18 @@
       <DependentUpon>InputText.cs</DependentUpon>
     </Compile>
     <Compile Include="Config\DatabaseConnection.cs" />
+    <Compile Include="Forms\Admin\Account\Account_CreateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\Account\Account_CreateForm.Designer.cs">
+      <DependentUpon>Account_CreateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\Account\Account_EditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\Account\Account_EditForm.Designer.cs">
+      <DependentUpon>Account_EditForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Admin\Brand\Brand_CreateForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,11 +97,11 @@
     <Compile Include="Forms\Admin\Category\Category_CreateForm.Designer.cs">
       <DependentUpon>Category_CreateForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Admin\Category\Category_UpdateForm.cs">
+    <Compile Include="Forms\Admin\Category\Category_EditForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Admin\Category\Category_UpdateForm.Designer.cs">
-      <DependentUpon>Category_UpdateForm.cs</DependentUpon>
+    <Compile Include="Forms\Admin\Category\Category_EditForm.Designer.cs">
+      <DependentUpon>Category_EditForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Admin\Dashboard.cs">
       <SubType>Form</SubType>
@@ -134,11 +146,11 @@
     <Compile Include="Forms\Admin\Supplier\Supplier_CreateForm.Designer.cs">
       <DependentUpon>Supplier_CreateForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Admin\Supplier\Supplier_UpdateForm.cs">
+    <Compile Include="Forms\Admin\Supplier\Supplier_EditForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Admin\Supplier\Supplier_UpdateForm.Designer.cs">
-      <DependentUpon>Supplier_UpdateForm.cs</DependentUpon>
+    <Compile Include="Forms\Admin\Supplier\Supplier_EditForm.Designer.cs">
+      <DependentUpon>Supplier_EditForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Admin\UserManagement.cs">
       <SubType>Form</SubType>
@@ -168,6 +180,9 @@
     <Compile Include="Server\Services\CategoryService.cs" />
     <Compile Include="Server\Services\ProductService.cs" />
     <Compile Include="Server\Services\SupplierService.cs" />
+    <Compile Include="Server\Utilities\LoginResult.cs" />
+    <Compile Include="Server\Utilities\ServiceResultLogin.cs" />
+    <Compile Include="Shared\DTOs\AccountDTO.cs" />
     <Compile Include="Shared\DTOs\BatchDTO.cs" />
     <Compile Include="Shared\DTOs\BrandDTO.cs" />
     <Compile Include="Shared\DTOs\CategoryDTO.cs" />
@@ -248,17 +263,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TworldModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Shared\Sessions\LoginSession.cs" />
     <EmbeddedResource Include="Components\InputText.resx">
       <DependentUpon>InputText.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Admin\Brand\Brand_CreateForm.resx">
       <DependentUpon>Brand_CreateForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\Brand\Brand_EditForm.resx">
+      <DependentUpon>Brand_EditForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Admin\Category\Category_CreateForm.resx">
       <DependentUpon>Category_CreateForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Admin\Category\Category_UpdateForm.resx">
-      <DependentUpon>Category_UpdateForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Admin\Category\Category_EditForm.resx">
+      <DependentUpon>Category_EditForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Admin\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
@@ -275,8 +294,8 @@
     <EmbeddedResource Include="Forms\Admin\Supplier\Supplier_CreateForm.resx">
       <DependentUpon>Supplier_CreateForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Admin\Supplier\Supplier_UpdateForm.resx">
-      <DependentUpon>Supplier_UpdateForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Admin\Supplier\Supplier_EditForm.resx">
+      <DependentUpon>Supplier_EditForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
