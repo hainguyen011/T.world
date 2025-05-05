@@ -104,6 +104,11 @@ namespace T.world.Server.Repositories
             GC.SuppressFinalize(this);
         }
 
+        public int GetTotalAmount()
+        {
+            return _dbContext.Accounts.Count();
+        }
+
         protected virtual void Dispose(bool disposing)
         {
             if (!_disposed)

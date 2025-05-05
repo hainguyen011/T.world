@@ -32,8 +32,8 @@ namespace T.world.Forms.Admin
 
         public event EventHandler DataReload;
 
-        private List<FormActions> tabActionForms;
-        private FormActions currentForm; 
+       
+      
 
         public Dashboard()
         {
@@ -87,6 +87,7 @@ namespace T.world.Forms.Admin
         {
             this.adTxt.Text = LoginSession.FullName;
             this.totalProduct.Text = _productService.GetTotalProductInStock().ToString();
+            this.totalAccount.Text = _accountService.GetTotalAccount().ToString();
         }
 
         // Load dữ liệu supplier
@@ -383,7 +384,7 @@ namespace T.world.Forms.Admin
             // Ẩn cột chứa id ( khóa ngoại )
             this.ProDatagridView.Columns["category_id"].Visible = false;
             this.ProDatagridView.Columns["brand_id"].Visible = false;
-
+            this.ProDatagridView.Columns["image_path"].Visible = false;
             // Thiết lập styles rows
             this.ProDatagridView.RowTemplate.Height = 120;
             this.ProDatagridView.DefaultCellStyle.SelectionForeColor = Color.White;

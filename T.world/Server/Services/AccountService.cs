@@ -153,6 +153,10 @@ namespace T.world.Services
             }
         }
 
-      
+        public int GetTotalAccount()
+        {
+            int total = _accountRepository.GetTotalAmount();
+            return total;
+        }
     }
 }

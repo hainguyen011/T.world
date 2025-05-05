@@ -73,7 +73,7 @@ namespace T.world.Forms.Admin.Product
 
         private void BrandComboBoxData_Load()
         {
-            var brandList = this._brandService.GetListBrand("", 1, 10);
+            var brandList = this._brandService.GetListBrand("", 1, 50);
             this.brandComboBox.DataSource = brandList;
             this.brandComboBox.DisplayMember = "name";
             this.brandComboBox.ValueMember = "id";
